@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community | Lone Star Hempworks</title>
+    <meta
+      name="description"
+      content="Local makers, goods, and community updates from Lone Star Hempworks in Seguin, Texas."
+    />
+    <link rel="canonical" href="https://lonestarhempworks.com/community.html" />
+    <meta property="og:title" content="Community | Lone Star Hempworks" />
+    <meta
+      property="og:description"
+      content="Spotlighting honey, salsa, handblown glass, and more from local makers."
+    />
+    <meta property="og:url" content="https://lonestarhempworks.com/community.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lonestarhempworks.com/assets/img/star.svg" />
+    <meta name="theme-color" content="#556B2F" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+      <div class="navbar">
+        <a class="brand" href="/">
+          <img src="/assets/img/star.svg" alt="Lone Star Hempworks star" />
+          <span>Lone Star Hempworks</span>
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          ☰ Menu
+        </button>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products.html">Products</a></li>
+            <li><a href="/community.html" aria-current="page">Community</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/about.html#contact">Contact</a></li>
+            <li><a href="/legal.html">Legal</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section narrow" aria-labelledby="community-heading">
+        <h1 id="community-heading">Community hub</h1>
+        <p>Celebrating local makers, collaborations, and Seguin neighbors who keep things vibrant.</p>
+        <div class="info-grid">
+          <div class="community-card">
+            <h3>Honey spotlight</h3>
+            <p>Local honey with rich flavor, perfect for tea, toast, or gifting.</p>
+          </div>
+          <div class="community-card">
+            <h3>Salsa spotlight</h3>
+            <p>Small-batch salsa crafted nearby — bold, shareable, and Texas proud.</p>
+          </div>
+          <div class="community-card">
+            <h3>Handblown glass</h3>
+            <p>Artful pieces from regional artists, each with its own character.</p>
+          </div>
+          <div class="community-card">
+            <h3>Future maker slots</h3>
+            <p>More spotlights coming soon. Have something special? Let us know.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section narrow" aria-labelledby="board">
+        <h2 id="board">Community board</h2>
+        <p class="alert">Events and announcements coming soon. Check back for neighborhood updates.</p>
+      </section>
+
+      <section class="section narrow" aria-labelledby="vendor-form">
+        <h2 id="vendor-form">Become a vendor</h2>
+        <p>Share what you make. We love showcasing goods that reflect Seguin and the wider Texas community.</p>
+        <div class="success-message" data-success-target role="status">Thanks for reaching out! We'll connect soon.</div>
+        <form
+          class="form"
+          name="vendor"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/community.html?sent=1"
+        >
+          <input type="hidden" name="form-name" value="vendor" />
+          <p class="hidden">
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <label for="vendor-name">Name</label>
+          <input id="vendor-name" name="name" required />
+
+          <label for="vendor-email">Email</label>
+          <input id="vendor-email" name="email" type="email" required />
+
+          <label for="vendor-what">What you make</label>
+          <input id="vendor-what" name="what-you-make" required />
+
+          <label for="vendor-message">Message</label>
+          <textarea id="vendor-message" name="message" required></textarea>
+
+          <input type="submit" value="Send" />
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>&copy; <span id="year"></span> Lone Star Hempworks. All rights reserved.</p>
+        <div>
+          <a href="/legal.html">Legal</a> · <a href="/about.html#contact">Contact</a> ·
+          <a href="#">Facebook (coming soon)</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal hidden" role="dialog" aria-modal="true" id="age-gate" aria-labelledby="age-title">
+      <div class="modal-content">
+        <h2 id="age-title">Adults only</h2>
+        <p>This site is intended for adults 21 and older. Are you 21 or older?</p>
+        <div class="modal-actions">
+          <button class="button" data-age-yes type="button">Yes</button>
+          <button class="button secondary" data-age-no type="button">No</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
