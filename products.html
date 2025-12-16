@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | Lone Star Hempworks</title>
+    <meta
+      name="description"
+      content="Explore hemp, flower, gummies, pre-rolls, concentrates, and local goods at Lone Star Hempworks in Seguin, TX."
+    />
+    <link rel="canonical" href="https://lonestarhempworks.com/products.html" />
+    <meta property="og:title" content="Products | Lone Star Hempworks" />
+    <meta
+      property="og:description"
+      content="Display-only categories: hemp, flower, pre-rolls, gummies, concentrates, and local goods."
+    />
+    <meta property="og:url" content="https://lonestarhempworks.com/products.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lonestarhempworks.com/assets/img/star.svg" />
+    <meta name="theme-color" content="#556B2F" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+      <div class="navbar">
+        <a class="brand" href="/">
+          <img src="/assets/img/star.svg" alt="Lone Star Hempworks star" />
+          <span>Lone Star Hempworks</span>
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          ☰ Menu
+        </button>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products.html" aria-current="page">Products</a></li>
+            <li><a href="/community.html">Community</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/about.html#contact">Contact</a></li>
+            <li><a href="/legal.html">Legal</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section narrow" aria-labelledby="products-heading">
+        <div class="alert">In-store availability varies. Visit or call for current options.</div>
+        <h1 id="products-heading">Product categories</h1>
+        <p>Curated for relaxation, enjoyment, and shared moments — with guidance to match.</p>
+        <div class="info-grid" aria-label="Product categories">
+          <div class="category-card">
+            <h3>Hemp</h3>
+            <p>Texas-friendly selections for visitors seeking a calm, approachable experience.</p>
+          </div>
+          <div class="category-card">
+            <h3>Flower</h3>
+            <p>Classic options with aromatic profiles and lab transparency.</p>
+          </div>
+          <div class="category-card">
+            <h3>Pre-rolls</h3>
+            <p>Convenient, ready-to-enjoy choices for easy evenings with friends.</p>
+          </div>
+          <div class="category-card">
+            <h3>Gummies / edibles</h3>
+            <p>Steady, simple servings for relaxed vibes. Start low and take your time.</p>
+          </div>
+          <div class="category-card">
+            <h3>Wax / concentrates</h3>
+            <p>For experienced guests looking for deeper experiences and rich terpene notes.</p>
+          </div>
+          <div class="category-card">
+            <h3>Local goods</h3>
+            <p>Honey, salsa, handblown glass, and curated items from nearby makers.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>&copy; <span id="year"></span> Lone Star Hempworks. All rights reserved.</p>
+        <div>
+          <a href="/legal.html">Legal</a> · <a href="/about.html#contact">Contact</a> ·
+          <a href="#">Facebook (coming soon)</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal hidden" role="dialog" aria-modal="true" id="age-gate" aria-labelledby="age-title">
+      <div class="modal-content">
+        <h2 id="age-title">Adults only</h2>
+        <p>This site is intended for adults 21 and older. Are you 21 or older?</p>
+        <div class="modal-actions">
+          <button class="button" data-age-yes type="button">Yes</button>
+          <button class="button secondary" data-age-no type="button">No</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
