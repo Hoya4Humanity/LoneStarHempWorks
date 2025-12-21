@@ -26,7 +26,7 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="navbar">
-        <a class="brand" href="./">
+        <a class="brand" href="index.html">
           <img
             src="assets/img/lone_star_hempworks_header_transparent_fixed2.png"
             alt="Lonestar HempWorks header logo"
@@ -78,22 +78,30 @@
           Reach out with questions about visiting, community events, or store details. 21+ only. Enjoy responsibly.
         </p>
         <div class="contact-card">
-          <div>
-            <div class="contact-tiles">
-              <div class="contact-tile">
+          <div class="contact-details">
+            <p class="inline-pill">Visit or call</p>
+            <p class="notice">All purchases happen in-store with ID verification. Nothing ships from this website.</p>
+            <div class="contact-rows">
+              <div class="contact-row">
                 <span class="icon-circle" aria-hidden="true">📍</span>
-                <h3>Address</h3>
-                <p>633 E Court St, Seguin, TX 78155</p>
+                <div>
+                  <h3>Address</h3>
+                  <p>633 E Court St, Seguin, TX 78155</p>
+                </div>
               </div>
-              <div class="contact-tile">
+              <div class="contact-row">
                 <span class="icon-circle" aria-hidden="true">📞</span>
-                <h3>Phone</h3>
-                <p><a href="tel:+18308003213">(830) 800-3213</a></p>
+                <div>
+                  <h3>Phone</h3>
+                  <p><a href="tel:+18308003213">(830) 800-3213</a></p>
+                </div>
               </div>
-              <div class="contact-tile">
+              <div class="contact-row">
                 <span class="icon-circle" aria-hidden="true">🕒</span>
-                <h3>Hours</h3>
-                <p>Doors open 9AM–10PM</p>
+                <div>
+                  <h3>Hours</h3>
+                  <p>Doors open 9AM–10PM</p>
+                </div>
               </div>
             </div>
             <div class="action-buttons">
@@ -106,12 +114,18 @@
                 Get Directions
               </a>
               <a class="button secondary" href="tel:+18308003213">Call Now</a>
+              <a class="card-button" href="#contact-form">Message us</a>
             </div>
           </div>
           <div class="visit-card">
-            <h3>What to expect</h3>
-            <p>Friendly, pressure-free answers. QR codes and lab reports available in-store. Nothing for sale online.</p>
-            <p class="badge">In-person only</p>
+            <p class="inline-pill">Community vibe</p>
+            <h3>Safe, tested, and transparent</h3>
+            <p>Friendly, pressure-free answers with QR codes and lab reports available in-store. Nothing for sale online.</p>
+            <ul class="highlight-list">
+              <li><span>Appreciation discounts</span> Veterans, active military, law enforcement, and first responders.</li>
+              <li><span>Respectful guidance</span> Clear notes about macro vs. micro mushroom products without medical claims.</li>
+              <li><span>Compliance-first</span> Legal, tested products and straightforward expectations before you visit.</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -170,7 +184,7 @@
       </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
