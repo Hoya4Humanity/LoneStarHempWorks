@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-nav');
   if (menuToggle && nav) {
+    const closeNav = () => {
+      nav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    };
+
     const toggleNav = () => {
       const isOpen = nav.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', String(isOpen));
@@ -12,10 +17,32 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         if (nav.classList.contains('open')) {
-          nav.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
+          closeNav();
         }
       });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (
+        nav.classList.contains('open') &&
+        !nav.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        closeNav();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && nav.classList.contains('open')) {
+        closeNav();
+        menuToggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && nav.classList.contains('open')) {
+        closeNav();
+      }
     });
   }
 
