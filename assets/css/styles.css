@@ -1,12 +1,13 @@
 :root {
-  --brand-green: #2f6a44;
-  --brand-green-dark: #245438;
-  --brand-purple: #5a3c8a;
-  --brand-purple-dark: #4b3174;
-  --sand: #f3efe8;
-  --ink: #1f1f29;
-  --slate: #2c3040;
-  --max-width: 1100px;
+  --brand-green: #2d7d4f;
+  --brand-green-dark: #23613d;
+  --brand-purple: #6a3fa0;
+  --brand-purple-dark: #563099;
+  --bg: #f4f1ea;
+  --card-bg: #ffffff;
+  --text: #1f1f29;
+  --muted: #3c4354;
+  --max-width: 1120px;
   --radius-lg: 16px;
   --radius-md: 12px;
   --shadow-soft: 0 10px 26px rgba(17, 34, 25, 0.12);
@@ -20,8 +21,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: var(--sand);
-  color: var(--ink);
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
 }
 
@@ -72,13 +73,13 @@ img {
   border: 0;
 }
 
-header {
+.site-header {
   position: sticky;
   top: 0;
   z-index: 900;
-  background: rgba(243, 239, 232, 0.96);
+  background: rgba(244, 241, 234, 0.96);
   backdrop-filter: blur(8px);
-  border-bottom: 2px solid rgba(47, 106, 68, 0.22);
+  border-bottom: 2px solid rgba(45, 125, 79, 0.2);
 }
 
 .navbar {
@@ -86,6 +87,7 @@ header {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.75rem;
   padding: 0.85rem 1rem;
 }
@@ -100,8 +102,9 @@ header {
 }
 
 .brand img {
-  height: 52px;
+  height: 60px;
   width: auto;
+  object-fit: contain;
 }
 
 .brand-text {
@@ -116,13 +119,20 @@ header {
 
 .brand-tag {
   font-size: 0.9rem;
-  color: var(--slate);
+  color: var(--muted);
+}
+
+.nav-group {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: relative;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  margin-left: auto;
 }
 
 .nav-links ul {
@@ -143,24 +153,23 @@ header {
   border-radius: 10px;
   display: inline-flex;
   align-items: center;
-  color: var(--slate);
+  color: var(--muted);
 }
 
 .nav-links a:hover,
 .nav-links a:focus-visible,
 .nav-links a.active {
-  background: var(--brand-green);
+  background: var(--brand-purple);
   color: white;
 }
 
 .menu-toggle {
-  margin-left: auto;
   display: none;
-  background: white;
-  border: 2px solid var(--brand-green);
+  background: var(--card-bg);
+  border: 2px solid var(--brand-purple);
   border-radius: 12px;
   padding: 0.45rem 0.7rem;
-  color: var(--brand-green);
+  color: var(--brand-purple);
   font-weight: 800;
   line-height: 1;
   box-shadow: var(--shadow-soft);
@@ -170,73 +179,83 @@ header {
   font-size: 1.1rem;
 }
 
+
 .hero {
-  background: radial-gradient(circle at 20% 20%, rgba(47, 106, 68, 0.16), transparent 45%),
-    radial-gradient(circle at 80% 0%, rgba(90, 60, 138, 0.2), transparent 45%),
-    linear-gradient(135deg, rgba(47, 106, 68, 0.08), rgba(90, 60, 138, 0.06));
+  background: radial-gradient(circle at 12% 25%, rgba(45, 125, 79, 0.14), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(106, 63, 160, 0.16), transparent 45%),
+    linear-gradient(135deg, rgba(45, 125, 79, 0.08), rgba(106, 63, 160, 0.06));
   padding: 3.25rem 1rem 2.5rem;
-  border-bottom: 2px solid rgba(47, 106, 68, 0.25);
+  border-bottom: 2px solid rgba(45, 125, 79, 0.2);
 }
 
 .hero-inner {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.7rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
 }
 
 .hero-copy {
   display: grid;
-  gap: 0.45rem;
+  gap: 0.5rem;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.2rem, 3vw + 1rem, 2.9rem);
-  color: var(--ink);
+  font-size: clamp(2.35rem, 3vw + 1rem, 3.1rem);
+  color: var(--text);
   letter-spacing: -0.02em;
 }
 
 .hero .tagline {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   color: var(--brand-green);
-  margin: 0.15rem 0 0.4rem;
+  margin: 0.15rem 0 0.35rem;
   font-weight: 800;
 }
 
 .hero .subline {
-  font-size: 1.1rem;
-  color: var(--slate);
+  font-size: 1.05rem;
+  color: var(--muted);
   margin: 0.25rem 0 0.75rem;
 }
 
 .hero .micro {
-  color: var(--slate);
+  color: var(--muted);
   font-weight: 700;
 }
 
-.hero-panel {
+.hero-visual {
   display: grid;
   gap: 1rem;
 }
 
-.hero-panel .info-card {
-  width: 100%;
-  background: white;
-  border-color: rgba(47, 106, 68, 0.2);
+.hero-promo {
+  background: var(--card-bg);
+  border: 1.5px solid rgba(106, 63, 160, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  box-shadow: 0 14px 32px rgba(31, 31, 41, 0.18);
+  display: grid;
+  gap: 0.6rem;
 }
 
-.hero-panel-title {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+.hero-promo img {
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(45, 125, 79, 0.12);
+  box-shadow: 0 10px 24px rgba(31, 31, 41, 0.14);
+}
+
+.hero-promo .micro {
+  color: var(--muted);
 }
 
 .trust-strip {
-  background: white;
-  border-bottom: 2px solid rgba(47, 106, 68, 0.2);
-  padding: 0.9rem 1rem;
+  background: var(--card-bg);
+  border-bottom: 2px solid rgba(106, 63, 160, 0.2);
+  padding: 0.85rem 1rem;
 }
 
 .trust-items {
@@ -246,7 +265,7 @@ header {
   gap: 0.6rem;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   font-weight: 800;
-  color: var(--slate);
+  color: var(--muted);
 }
 
 .trust-pill {
@@ -255,8 +274,8 @@ header {
   gap: 0.35rem;
   padding: 0.55rem 0.65rem;
   border-radius: 12px;
-  border: 1.5px solid rgba(47, 106, 68, 0.25);
-  background: rgba(90, 60, 138, 0.06);
+  border: 1.5px solid rgba(45, 125, 79, 0.25);
+  background: rgba(106, 63, 160, 0.07);
 }
 
 .button-grid {
@@ -301,8 +320,8 @@ header {
 }
 
 .promo {
-  background: linear-gradient(135deg, rgba(47, 106, 68, 0.08), rgba(90, 60, 138, 0.08));
-  border-block: 2px solid rgba(47, 106, 68, 0.24);
+  background: linear-gradient(135deg, rgba(45, 125, 79, 0.08), rgba(106, 63, 160, 0.08));
+  border-block: 2px solid rgba(45, 125, 79, 0.24);
 }
 
 .promo-inner {
@@ -331,7 +350,7 @@ header {
   height: auto;
   border-radius: var(--radius-lg);
   box-shadow: 0 14px 32px rgba(31, 31, 41, 0.16);
-  border: 2px solid rgba(31, 31, 41, 0.08);
+  border: 2px solid rgba(45, 125, 79, 0.15);
 }
 
 .visit .contact-grid {
@@ -341,21 +360,24 @@ header {
   margin: 1rem 0;
 }
 
-.expect-grid {
+.expect-grid,
+.card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1rem;
 }
 
-.expect-card {
-  background: white;
-  border: 1.5px solid rgba(90, 60, 138, 0.25);
+.expect-card,
+.card-tile {
+  background: var(--card-bg);
+  border: 1.5px solid rgba(106, 63, 160, 0.2);
   border-radius: var(--radius-md);
   padding: 1.35rem;
   box-shadow: var(--shadow-soft);
 }
 
-.expect-card h3 {
+.expect-card h3,
+.card-tile h3 {
   margin-top: 0;
   color: var(--brand-green);
 }
@@ -364,17 +386,64 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.25rem;
-  background: white;
+  background: var(--card-bg);
   padding: 1.5rem;
-  border: 2px solid rgba(47, 106, 68, 0.25);
+  border: 2px solid rgba(45, 125, 79, 0.25);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   align-items: start;
 }
 
+.contact-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.contact-tile {
+  background: var(--card-bg);
+  border: 1.5px solid rgba(45, 125, 79, 0.25);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(106, 63, 160, 0.12);
+  color: var(--brand-purple);
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(31, 31, 41, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.accent-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 12px;
+  background: rgba(45, 125, 79, 0.14);
+  color: var(--brand-green);
+  font-weight: 700;
+}
+
 .visit-card {
-  background: rgba(90, 60, 138, 0.06);
-  border: 1.5px solid rgba(90, 60, 138, 0.35);
+  background: rgba(106, 63, 160, 0.08);
+  border: 1.5px solid rgba(106, 63, 160, 0.35);
   border-radius: var(--radius-md);
   padding: 1.25rem;
   box-shadow: var(--shadow-soft);
@@ -393,8 +462,8 @@ header {
 .info-card,
 .category-card,
 .community-card {
-  background: white;
-  border: 1.5px solid rgba(47, 106, 68, 0.25);
+  background: var(--card-bg);
+  border: 1.5px solid rgba(45, 125, 79, 0.25);
   border-radius: var(--radius-md);
   padding: 1.35rem;
   box-shadow: var(--shadow-soft);
@@ -404,7 +473,7 @@ header {
 .community-card h3,
 .info-card h3 {
   margin-top: 0;
-  color: var(--ink);
+  color: var(--text);
 }
 
 .badge {
@@ -484,11 +553,11 @@ input[type="submit"]:focus-visible {
 
 .form .note {
   font-size: 0.9rem;
-  color: var(--slate);
+  color: var(--muted);
 }
 
 .footer {
-  background: var(--slate);
+  background: var(--muted);
   color: white;
   padding: 1.5rem 1rem;
   margin-top: 2rem;
@@ -571,16 +640,16 @@ body.modal-open {
 
 .notice {
   font-weight: 700;
-  color: var(--slate);
+  color: var(--muted);
   margin-bottom: 0.5rem;
 }
 
 .success-message {
-  background: rgba(90, 60, 138, 0.08);
-  color: var(--slate);
+  background: rgba(106, 63, 160, 0.08);
+  color: var(--muted);
   padding: 0.75rem 1rem;
   border-radius: 10px;
-  border: 1.5px solid rgba(90, 60, 138, 0.35);
+  border: 1.5px solid rgba(106, 63, 160, 0.35);
   font-weight: 700;
   display: none;
 }
@@ -628,11 +697,11 @@ body.modal-open {
 
   .nav-links {
     position: absolute;
-    top: 100%;
-    right: 1rem;
-    background: var(--sand);
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background: var(--card-bg);
     padding: 0.85rem;
-    border: 2px solid rgba(47, 106, 68, 0.4);
+    border: 2px solid rgba(106, 63, 160, 0.35);
     border-radius: 12px;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
     display: none;

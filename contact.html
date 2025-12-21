@@ -24,80 +24,94 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header>
+    <header class="site-header">
       <div class="navbar">
-        <a class="brand" href="index.html">
+        <a class="brand" href="./">
           <img
             src="assets/img/lone_star_hempworks_header_transparent_fixed2.png"
-            alt="Lone Star Hempworks"
+            alt="Lonestar HempWorks header logo"
           />
           <span class="brand-text">
-            <span class="brand-name">Lone Star Hempworks</span>
+            <span class="brand-name">Lonestar HempWorks</span>
             <span class="brand-tag">Seguin, TX</span>
           </span>
-          <span class="sr-only">Lone Star Hempworks</span>
+          <span class="sr-only">Lonestar HempWorks</span>
         </a>
-        <nav id="primary-nav" class="nav-links" aria-label="Primary">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="community.html">Community</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
-            <li><a href="legal.html">Legal</a></li>
-          </ul>
-        </nav>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-          aria-label="Toggle navigation"
-        >
-          <span aria-hidden="true">☰</span>
-          <span class="sr-only">Menu</span>
-        </button>
+        <div class="nav-group">
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation"
+          >
+            <span aria-hidden="true">☰</span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <nav id="primary-nav" class="nav-links" aria-label="Primary">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="community.html">Community</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+              <li><a href="legal.html">Legal</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main id="main">
+      <section class="trust-strip" aria-label="Trust and values">
+        <div class="trust-items">
+          <span class="trust-pill">21+ only</span>
+          <span class="trust-pill">Lab-tested transparency</span>
+          <span class="trust-pill">QR codes on every product</span>
+          <span class="trust-pill">Nothing ships from this site</span>
+        </div>
+      </section>
+
       <section class="section narrow" aria-labelledby="contact-heading">
         <h1 id="contact-heading">Contact Lone Star Hempworks</h1>
         <p>
           Reach out with questions about visiting, community events, or store details. 21+ only. Enjoy responsibly.
         </p>
-        <div class="location-block">
+        <div class="contact-card">
           <div>
-            <div class="contact-grid">
-              <div>
+            <div class="contact-tiles">
+              <div class="contact-tile">
+                <span class="icon-circle" aria-hidden="true">📍</span>
                 <h3>Address</h3>
                 <p>633 E Court St, Seguin, TX 78155</p>
               </div>
-              <div>
+              <div class="contact-tile">
+                <span class="icon-circle" aria-hidden="true">📞</span>
                 <h3>Phone</h3>
                 <p><a href="tel:+18308003213">(830) 800-3213</a></p>
               </div>
-              <div>
+              <div class="contact-tile">
+                <span class="icon-circle" aria-hidden="true">🕒</span>
                 <h3>Hours</h3>
                 <p>Doors open 9AM–10PM</p>
               </div>
             </div>
-            <div class="button-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-top: 1rem;">
+            <div class="action-buttons">
               <a
                 class="button"
                 href="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Get directions
+                Get Directions
               </a>
-              <a class="button secondary" href="tel:+18308003213">Call now</a>
+              <a class="button secondary" href="tel:+18308003213">Call Now</a>
             </div>
           </div>
-          <div class="info-card">
+          <div class="visit-card">
             <h3>What to expect</h3>
-            <p>Friendly, pressure-free answers. Lab reports available. Nothing for sale online.</p>
-            <p class="badge">21+ only</p>
+            <p>Friendly, pressure-free answers. QR codes and lab reports available in-store. Nothing for sale online.</p>
+            <p class="badge">In-person only</p>
           </div>
         </div>
       </section>
