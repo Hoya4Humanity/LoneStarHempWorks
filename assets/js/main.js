@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-nav');
+  const navOverlay = document.querySelector('.nav-overlay');
   const body = document.body;
 
   if (menuToggle && nav) {
@@ -8,12 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('open');
       body.classList.remove('menu-open');
       menuToggle.setAttribute('aria-expanded', 'false');
+      if (navOverlay) {
+        navOverlay.classList.remove('visible');
+      }
     };
 
     const openNav = () => {
       nav.classList.add('open');
       body.classList.add('menu-open');
       menuToggle.setAttribute('aria-expanded', 'true');
+      if (navOverlay) {
+        navOverlay.classList.add('visible');
+      }
     };
 
     const toggleNav = () => {
@@ -43,6 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
         closeNav();
       }
     });
+
+    if (navOverlay) {
+      navOverlay.addEventListener('click', closeNav);
+    }
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && nav.classList.contains('open')) {
