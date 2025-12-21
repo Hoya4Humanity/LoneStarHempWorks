@@ -24,49 +24,60 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header>
+    <header class="site-header">
       <div class="navbar">
-        <a class="brand" href="index.html">
+        <a class="brand" href="./">
           <img
             src="assets/img/lone_star_hempworks_header_transparent_fixed2.png"
-            alt="Lone Star Hempworks"
+            alt="Lonestar HempWorks header logo"
           />
           <span class="brand-text">
-            <span class="brand-name">Lone Star Hempworks</span>
+            <span class="brand-name">Lonestar HempWorks</span>
             <span class="brand-tag">Seguin, TX</span>
           </span>
-          <span class="sr-only">Lone Star Hempworks</span>
+          <span class="sr-only">Lonestar HempWorks</span>
         </a>
-        <nav id="primary-nav" class="nav-links" aria-label="Primary">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="products.html" aria-current="page">Products</a></li>
-            <li><a href="community.html">Community</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="legal.html">Legal</a></li>
-          </ul>
-        </nav>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-          aria-label="Toggle navigation"
-        >
-          <span aria-hidden="true">☰</span>
-          <span class="sr-only">Menu</span>
-        </button>
+        <div class="nav-group">
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation"
+          >
+            <span aria-hidden="true">☰</span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <nav id="primary-nav" class="nav-links" aria-label="Primary">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a class="active" href="products.html" aria-current="page">Products</a></li>
+              <li><a href="community.html">Community</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="legal.html">Legal</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main id="main">
+      <section class="trust-strip" aria-label="Trust and values">
+        <div class="trust-items">
+          <span class="trust-pill">21+ only</span>
+          <span class="trust-pill">Lab-tested transparency</span>
+          <span class="trust-pill">QR codes on every product</span>
+          <span class="trust-pill">Nothing ships from this site</span>
+        </div>
+      </section>
+
       <section class="section narrow" aria-labelledby="products-heading">
         <div class="alert">Information only. Nothing for sale online. Availability can change—visit or call to confirm.</div>
         <h1 id="products-heading">Product categories</h1>
         <p>
-          Explore these categories in-store with guidance from our team. We avoid gas-station mystery items, keep QR-code lab
-          transparency front and center, and prioritize compliant, tested products.
+          Explore these categories in-store with guidance from our team. Skip gas-station mystery hemp—shop tested, labeled
+          products with QR transparency and compliant sourcing.
         </p>
         <div class="info-grid" aria-label="Product categories">
           <div class="category-card">
@@ -91,7 +102,7 @@
           </div>
           <div class="category-card">
             <h3>Mushroom-based products</h3>
-            <p>Safe, tested, and legal options with clear macro vs. micro dosing education—no therapeutic claims, just facts.</p>
+            <p>Safe, tested, and legal mushroom-based products with clear micro vs. macro distinctions—educational details only, never medical claims.</p>
           </div>
           <div class="category-card">
             <h3>Lonestar Private Reserve</h3>
