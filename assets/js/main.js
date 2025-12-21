@@ -1,11 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
-  const navList = document.querySelector('nav ul');
-  if (menuToggle && navList) {
-    menuToggle.addEventListener('click', () => {
-      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', String(!expanded));
-      navList.classList.toggle('open');
+  const nav = document.getElementById('primary-nav');
+  if (menuToggle && nav) {
+    const toggleNav = () => {
+      const isOpen = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    menuToggle.addEventListener('click', toggleNav);
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   }
 
@@ -18,7 +28,7 @@ function handleAgeGate() {
   if (body.classList.contains('no-age-gate')) return;
   const ageStatus = localStorage.getItem('ageStatus');
   if (ageStatus === 'no') {
-    window.location.href = '/not-eligible.html';
+    window.location.href = 'not-eligible.html';
     return;
   }
 
@@ -48,7 +58,7 @@ function handleAgeGate() {
   if (noBtn) {
     noBtn.addEventListener('click', () => {
       localStorage.setItem('ageStatus', 'no');
-      window.location.href = '/not-eligible.html';
+      window.location.href = 'not-eligible.html';
     });
   }
 }

@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Not Eligible | Lone Star Hempworks</title>
+    <title>21+ Notice | Lone Star Hempworks</title>
     <meta
       name="description"
-      content="This site and store are intended for adults 21 and older."
+      content="Lone Star Hempworks content and store are for adults 21 and older. Enjoy responsibly."
     />
-    <link rel="canonical" href="https://lonestarhempworks.com/not-eligible.html" />
-    <meta property="og:title" content="Not Eligible | Lone Star Hempworks" />
-    <meta property="og:description" content="This site and store are intended for adults 21 and older." />
-    <meta property="og:url" content="https://lonestarhempworks.com/not-eligible.html" />
+    <meta property="og:title" content="21+ Notice | Lone Star Hempworks" />
+    <meta
+      property="og:description"
+      content="Lone Star Hempworks content and store are for adults 21 and older. Enjoy responsibly."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/img/star.svg" />
+    <meta
+      property="og:image"
+      content="assets/img/lone_star_hempworks_header_transparent_fixed2.png"
+    />
     <meta name="theme-color" content="#556B2F" />
+    <link rel="icon" href="assets/img/star.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body class="no-age-gate">
@@ -22,9 +27,32 @@
     <header>
       <div class="navbar">
         <a class="brand" href="index.html">
-          <img src="assets/img/star.svg" alt="Lone Star Hempworks star" />
-          <span>Lone Star Hempworks</span>
+          <img
+            src="assets/img/lone_star_hempworks_header_transparent_fixed2.png"
+            alt="Lone Star Hempworks"
+          />
+          <span class="sr-only">Lone Star Hempworks</span>
         </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation"
+        >
+          <span aria-hidden="true">☰</span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav id="primary-nav" class="nav-links" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="legal.html">Legal</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -48,6 +76,7 @@
       </div>
     </footer>
 
+    <script src="assets/js/main.js"></script>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
