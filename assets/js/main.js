@@ -1,15 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-nav');
+  const body = document.body;
+
   if (menuToggle && nav) {
     const closeNav = () => {
       nav.classList.remove('open');
+      body.classList.remove('menu-open');
       menuToggle.setAttribute('aria-expanded', 'false');
     };
 
+    const openNav = () => {
+      nav.classList.add('open');
+      body.classList.add('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+    };
+
     const toggleNav = () => {
-      const isOpen = nav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      if (nav.classList.contains('open')) {
+        closeNav();
+      } else {
+        openNav();
+      }
     };
 
     menuToggle.addEventListener('click', toggleNav);
@@ -40,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && nav.classList.contains('open')) {
+      if (nav.classList.contains('open')) {
         closeNav();
       }
     });
