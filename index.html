@@ -45,8 +45,11 @@
     <header>
       <div class="navbar">
         <a class="brand" href="index.html">
-          <img src="assets/img/star.svg" alt="Lone Star Hempworks star" />
-          <span>Lone Star Hempworks</span>
+          <img
+            src="assets/img/lone_star_hempworks_header_transparent_fixed2.png"
+            alt="Lone Star Hempworks header logo for Seguin, Texas"
+          />
+          <span class="sr-only">Lone Star Hempworks</span>
         </a>
         <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
           ☰ Menu
@@ -67,64 +70,93 @@
     <main id="main">
       <section class="hero" aria-labelledby="site-intro">
         <div class="hero-inner">
-          <div>
+          <div class="hero-copy">
             <p class="inline-pill">Seguin, Texas</p>
             <h1 id="site-intro">Lone Star Hempworks</h1>
-            <p class="tagline">Seguin's Guide to Green</p>
-            <p class="subline">Friendly guidance on hemp, flower, and local goods.</p>
-            <p class="notice">A community-first Texas store — come as you are.</p>
-            <p class="micro">21+ only • Enjoy responsibly • Lab reports available</p>
+            <p class="tagline">Seguin’s Guide to Green</p>
+            <p class="subline">Local knowledge, relaxed atmosphere, and education-first staff here to help you explore confidently.</p>
+            <p class="notice">Nothing for sale online — visit the shop for guidance.</p>
+            <p class="micro">21+ only • Enjoy responsibly • Lab reports available • Nothing for sale online</p>
           </div>
-          <div class="button-grid" aria-label="Quick links">
-            <a class="card-button" href="about.html">About Us</a>
-            <a class="card-button" href="products.html">Products</a>
-            <a class="card-button" href="community.html">Community</a>
-            <a class="card-button" href="about.html#contact">Contact / Visit</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section narrow" aria-labelledby="new-here">
-        <h2 id="new-here">New here? Start here.</h2>
-        <div class="info-grid">
-          <div class="info-card">
-            <h3>Comfort level</h3>
-            <ul class="highlight-list">
-              <li><span>Light</span> — gentle and easygoing.</li>
-              <li><span>Balanced</span> — steady and calm.</li>
-              <li><span>Stronger</span> — deeper unwind when you're ready.</li>
-            </ul>
-          </div>
-          <div class="info-card">
-            <h3>Formats to explore</h3>
-            <ul class="highlight-list">
-              <li><span>Gummies</span> — simple and shareable.</li>
-              <li><span>Pre-rolls</span> — ready when you are.</li>
-              <li><span>Flower</span> — classic and flexible.</li>
-              <li><span>Concentrates</span> — for experienced visitors.</li>
-            </ul>
-          </div>
-          <div class="info-card">
-            <h3>Friendly guidance</h3>
-            <p class="notice">Start low and take your time.</p>
-            <p>We keep it judgment-free and focus on what feels right for you.</p>
+          <div class="hero-panel">
+            <div class="info-card">
+              <h2 class="hero-panel-title">What to expect</h2>
+              <ul class="highlight-list">
+                <li><span>Education over sales</span> — questions welcome, pressure-free.</li>
+                <li><span>Thoughtful selections</span> — flower, gummies, and classics for different comfort levels.</li>
+                <li><span>Local heart</span> — Seguin owned, rooted in community.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section narrow" aria-labelledby="location">
+      <section class="trust-strip" aria-label="Trust and values">
+        <div class="trust-items">
+          <span>Community-first Texas shop</span>
+          <span>Education over sales</span>
+          <span>21+ only</span>
+          <span>Lab-tested transparency</span>
+        </div>
+      </section>
+
+      <section class="section promo" aria-labelledby="featured-deal">
+        <div class="promo-inner">
+          <div class="promo-copy">
+            <p class="inline-pill">In-store highlight</p>
+            <h2 id="featured-deal">Today’s Featured Deal</h2>
+            <p class="subline">Stop by for our latest community favorite. Availability may vary.</p>
+            <ul class="highlight-list">
+              <li><span>In-store only</span> — ask our staff for details.</li>
+              <li><span>Responsibility first</span> — enjoy mindfully and bring your questions.</li>
+            </ul>
+          </div>
+          <figure class="promo-figure">
+            <img
+              src="assets/img/Hempy-99.PNG"
+              class="promo-image"
+              alt="Hempy promo poster – $99 ounces in Seguin Texas"
+            />
+            <figcaption class="micro">Local promo graphic shown for visitors to discuss with staff.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section narrow visit" aria-labelledby="location">
         <div class="location-block">
           <div>
-            <h2 id="location">Visit us</h2>
-            <p>633 E Court St, Seguin, TX 78155</p>
-            <div class="button-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
-              <a class="button" href="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155" target="_blank" rel="noreferrer noopener">Get Directions</a>
-              <a class="button secondary" href="https://www.instagram.com/lonestarhempworks/" target="_blank" rel="noreferrer noopener">Instagram</a>
+            <p class="inline-pill">Plan your visit</p>
+            <h2 id="location">Visit or call us</h2>
+            <p class="notice">Nothing ships from this site. Come see us in person.</p>
+            <div class="contact-grid">
+              <div>
+                <h3>Address</h3>
+                <p>633 E Court St, Seguin, TX 78155</p>
+              </div>
+              <div>
+                <h3>Phone</h3>
+                <p>(830) 800-3213</p>
+              </div>
+              <div>
+                <h3>Hours</h3>
+                <p>Doors open 9AM–10PM</p>
+              </div>
+            </div>
+            <div class="button-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+              <a
+                class="button"
+                href="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Get Directions
+              </a>
+              <a class="button secondary" href="tel:+18308003213">Call Now</a>
             </div>
           </div>
           <div class="info-card">
             <h3>Why locals visit</h3>
-            <p>Thoughtful suggestions, lab transparency, and a space where questions are welcome.</p>
+            <p>Friendly conversations, transparent lab reports, and a calm space to learn what works for you.</p>
             <p class="badge">Community-first</p>
           </div>
         </div>
