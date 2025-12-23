@@ -3,7 +3,7 @@
   --brand-green-dark: #1e6e42;
   --brand-purple: #6e4bb6;
   --brand-purple-dark: #553a9a;
-  --bg: #f7f6f2;
+  --bg: #f6f5f1;
   --card-bg: #ffffff;
   --text: #1c1b2e;
   --muted: #3b3c56;
@@ -77,9 +77,10 @@ img {
   position: sticky;
   top: 0;
   z-index: 900;
-  background: rgba(246, 243, 251, 0.96);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(8px);
   border-bottom: 2px solid rgba(46, 138, 85, 0.24);
+  box-shadow: 0 8px 24px rgba(15, 25, 20, 0.06);
 }
 
 .navbar {
@@ -221,9 +222,8 @@ body.menu-open .nav-overlay {
 
 .hero {
   background:
-    radial-gradient(circle at 12% 25%, rgba(46, 138, 85, 0.12), transparent 36%),
-    radial-gradient(circle at 82% 16%, rgba(110, 75, 182, 0.1), transparent 38%),
-    linear-gradient(135deg, rgba(110, 75, 182, 0.06), rgba(44, 138, 85, 0.06)),
+    radial-gradient(circle at 12% 25%, rgba(46, 138, 85, 0.14), transparent 34%),
+    linear-gradient(135deg, rgba(44, 138, 85, 0.08), rgba(44, 138, 85, 0.02)),
     var(--bg);
   padding: 3.5rem 1rem 2.75rem;
   border-bottom: 2px solid rgba(46, 138, 85, 0.24);
@@ -307,7 +307,7 @@ body.menu-open .nav-overlay {
 
 .trust-strip {
   background: var(--card-bg);
-  border-bottom: 2px solid rgba(106, 75, 182, 0.2);
+  border-bottom: 2px solid rgba(46, 138, 85, 0.2);
   padding: 0.85rem 1rem;
 }
 
@@ -373,8 +373,8 @@ body.menu-open .nav-overlay {
 }
 
 .promo {
-  background: linear-gradient(135deg, rgba(45, 125, 79, 0.08), rgba(106, 63, 160, 0.08));
-  border-block: 2px solid rgba(46, 138, 85, 0.24);
+  background: var(--card-bg);
+  border-block: 2px solid rgba(46, 138, 85, 0.2);
 }
 
 .promo-inner {
@@ -406,6 +406,43 @@ body.menu-open .nav-overlay {
   border: 2px solid rgba(45, 125, 79, 0.15);
 }
 
+.hempy-section {
+  padding: 3rem 1rem;
+  background: var(--bg);
+  border-block: 2px solid rgba(46, 138, 85, 0.24);
+}
+
+.hempy-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.hempy-copy {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hempy-copy h2 {
+  color: var(--text);
+  margin: 0;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.footnote {
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0.35rem 0 0;
+}
+
 .visit .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -425,7 +462,7 @@ body.menu-open .nav-overlay {
 .card-tile,
 .highlight-card {
   background: var(--card-bg);
-  border: 1.5px solid rgba(110, 75, 182, 0.18);
+  border: 1.5px solid rgba(45, 125, 79, 0.24);
   border-radius: var(--radius-md);
   padding: 1.4rem;
   box-shadow: var(--shadow-soft);
@@ -554,6 +591,40 @@ body.menu-open .nav-overlay {
   font-weight: 700;
 }
 
+.quick-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.quick-card {
+  background: var(--card-bg);
+  border: 1.5px solid rgba(45, 125, 79, 0.24);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.quick-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.quick-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+@media (min-width: 720px) {
+  .quick-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .value-section {
   padding: 2.25rem 1rem;
   background: var(--bg);
@@ -638,8 +709,8 @@ body.menu-open .nav-overlay {
 }
 
 .visit-card {
-  background: rgba(106, 63, 160, 0.08);
-  border: 1.5px solid rgba(106, 75, 182, 0.35);
+  background: var(--card-bg);
+  border: 1.5px solid rgba(45, 125, 79, 0.3);
   border-radius: var(--radius-md);
   padding: 1.4rem;
   box-shadow: var(--shadow-soft);
@@ -845,11 +916,11 @@ body.menu-open {
 }
 
 .success-message {
-  background: rgba(106, 63, 160, 0.08);
+  background: rgba(45, 125, 79, 0.08);
   color: var(--muted);
   padding: 0.75rem 1rem;
   border-radius: 10px;
-  border: 1.5px solid rgba(106, 63, 160, 0.35);
+  border: 1.5px solid rgba(45, 125, 79, 0.35);
   font-weight: 700;
   display: none;
 }
