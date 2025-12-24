@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (navOverlay) {
         navOverlay.classList.add('visible');
       }
+      const firstLink = nav.querySelector('a');
+      if (firstLink) {
+        firstLink.focus();
+      }
     };
 
     const toggleNav = () => {
@@ -59,6 +63,24 @@ document.addEventListener('DOMContentLoaded', () => {
       if (event.key === 'Escape' && nav.classList.contains('open')) {
         closeNav();
         menuToggle.focus();
+        return;
+      }
+
+      if (event.key === 'Tab' && nav.classList.contains('open')) {
+        const focusables = [menuToggle, ...nav.querySelectorAll('a')];
+        const visibleItems = focusables.filter((el) => el.offsetParent !== null);
+        if (!visibleItems.length) return;
+
+        const first = visibleItems[0];
+        const last = visibleItems[visibleItems.length - 1];
+
+        if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        } else if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        }
       }
     });
 
