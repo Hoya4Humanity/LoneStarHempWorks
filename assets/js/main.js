@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
 
   if (menuToggle && nav) {
+    let lastFocusedElement = null;
+
     const closeNav = () => {
       nav.classList.remove('open');
       body.classList.remove('menu-open');
@@ -12,9 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (navOverlay) {
         navOverlay.classList.remove('visible');
       }
+      if (lastFocusedElement) {
+        menuToggle.focus();
+      }
     };
 
     const openNav = () => {
+      lastFocusedElement = document.activeElement;
       nav.classList.add('open');
       body.classList.add('menu-open');
       menuToggle.setAttribute('aria-expanded', 'true');
