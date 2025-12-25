@@ -8,11 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastFocusedElement = null;
     const desktopQuery = window.matchMedia('(min-width: 960px)');
 
+    const setHiddenState = (isHidden) => {
+      nav.hidden = isHidden;
+      nav.setAttribute('aria-hidden', isHidden ? 'true' : 'false');
+    };
+
     const syncDesktopState = () => {
       const isDesktop = desktopQuery.matches;
       if (isDesktop) {
         nav.classList.remove('open');
-        nav.setAttribute('aria-hidden', 'false');
+        setHiddenState(false);
+        nav.setAttribute('aria-modal', 'false');
         body.classList.remove('menu-open');
         menuToggle.setAttribute('aria-expanded', 'false');
         if (navOverlay) {
@@ -20,44 +26,42 @@ document.addEventListener('DOMContentLoaded', () => {
           navOverlay.setAttribute('aria-hidden', 'true');
         }
       } else if (!nav.classList.contains('open')) {
-        nav.setAttribute('aria-hidden', 'true');
+        setHiddenState(true);
       }
     };
 
-    syncDesktopState();
-    desktopQuery.addEventListener('change', syncDesktopState);
-
-    if (navOverlay) {
-      navOverlay.setAttribute('aria-hidden', 'true');
-    }
-
-    const closeNav = () => {
+    const closeNav = ({ restoreFocus = true } = {}) => {
       nav.classList.remove('open');
-      nav.setAttribute('aria-hidden', 'true');
+      setHiddenState(!desktopQuery.matches);
+      nav.setAttribute('aria-modal', 'false');
       body.classList.remove('menu-open');
       menuToggle.setAttribute('aria-expanded', 'false');
       if (navOverlay) {
         navOverlay.classList.remove('visible');
         navOverlay.setAttribute('aria-hidden', 'true');
       }
-      menuToggle.focus();
+      if (restoreFocus) {
+        if (lastFocusedElement instanceof HTMLElement) {
+          lastFocusedElement.focus();
+        } else {
+          menuToggle.focus();
+        }
+      }
       lastFocusedElement = null;
     };
 
     const openNav = () => {
       lastFocusedElement = document.activeElement;
       nav.classList.add('open');
-      nav.setAttribute('aria-hidden', 'false');
+      setHiddenState(false);
+      nav.setAttribute('aria-modal', 'true');
       body.classList.add('menu-open');
       menuToggle.setAttribute('aria-expanded', 'true');
       if (navOverlay) {
         navOverlay.classList.add('visible');
         navOverlay.setAttribute('aria-hidden', 'false');
       }
-      const firstLink = nav.querySelector('a');
-      if (firstLink) {
-        firstLink.focus();
-      }
+      nav.focus();
     };
 
     const toggleNav = () => {
@@ -67,6 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
         openNav();
       }
     };
+
+    syncDesktopState();
+    desktopQuery.addEventListener('change', syncDesktopState);
+
+    if (navOverlay) {
+      navOverlay.setAttribute('aria-hidden', 'true');
+    }
 
     menuToggle.addEventListener('click', toggleNav);
 
@@ -89,19 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (navOverlay) {
-      navOverlay.addEventListener('click', closeNav);
+      navOverlay.addEventListener('click', () => closeNav());
     }
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && nav.classList.contains('open')) {
         closeNav();
-        menuToggle.focus();
         return;
       }
 
       if (event.key === 'Tab' && nav.classList.contains('open')) {
         const focusables = [menuToggle, ...nav.querySelectorAll('a')];
-        const visibleItems = focusables.filter((el) => el.offsetParent !== null);
+        const visibleItems = focusables.filter((el) => el && el.offsetParent !== null);
         if (!visibleItems.length) return;
 
         const first = visibleItems[0];
@@ -119,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => {
       if (nav.classList.contains('open')) {
-        closeNav();
+        closeNav({ restoreFocus: false });
       }
       syncDesktopState();
     });
