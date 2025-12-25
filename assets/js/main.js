@@ -14,9 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (navOverlay) {
         navOverlay.classList.remove('visible');
       }
-      if (lastFocusedElement) {
-        menuToggle.focus();
-      }
+      menuToggle.focus();
+      lastFocusedElement = null;
     };
 
     const openNav = () => {
