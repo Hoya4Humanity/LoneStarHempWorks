@@ -45,10 +45,23 @@
             aria-controls="primary-nav"
             aria-label="Toggle navigation"
           >
-            <span aria-hidden="true">☰</span>
+            <span class="menu-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
             <span class="sr-only">Menu</span>
           </button>
-          <nav id="primary-nav" class="nav-links" aria-label="Primary">
+          <nav
+            id="primary-nav"
+            class="nav-links"
+            aria-label="Primary"
+            role="dialog"
+            aria-modal="false"
+            aria-hidden="true"
+            tabindex="-1"
+            hidden
+          >
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="products.html">Products</a></li>
@@ -110,7 +123,7 @@
             <p class="micro">Hours may extend later on select nights (Thu–Sat) — call to confirm.</p>
           </div>
         </div>
-        <div class="contact-actions">
+        <div class="contact-actions button-row">
           <a
             class="button"
             href="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155"

@@ -65,10 +65,23 @@
             aria-controls="primary-nav"
             aria-label="Toggle navigation"
           >
-            <span aria-hidden="true">☰</span>
+            <span class="menu-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
             <span class="sr-only">Menu</span>
           </button>
-          <nav id="primary-nav" class="nav-links" aria-label="Primary">
+          <nav
+            id="primary-nav"
+            class="nav-links"
+            aria-label="Primary"
+            role="dialog"
+            aria-modal="false"
+            aria-hidden="true"
+            tabindex="-1"
+            hidden
+          >
             <ul>
               <li><a href="index.html" class="active" aria-current="page">Home</a></li>
               <li><a href="products.html">Products</a></li>
@@ -105,7 +118,7 @@
               Adults 21+. Information-only site. Private, respectful conversations happen in person with QR code details
               on every item. Nothing ships from here.
             </p>
-            <div class="hero-actions">
+            <div class="hero-actions button-row">
               <a class="button" href="#visit">Plan your visit</a>
               <a class="button secondary" href="tel:+18308003213">Call now</a>
             </div>
@@ -145,7 +158,7 @@
               Hempy $99 ounces are featured in-store only. Ask which strains are available today and scan QR codes for batch
               specifics before you choose. Availability varies.
             </p>
-            <div class="cta-row">
+            <div class="cta-row button-row">
               <a class="button" href="#visit">Plan your visit</a>
               <a class="button secondary" href="mailto:lonestarhempworks@gmail.com">Email the shop</a>
             </div>
@@ -241,18 +254,17 @@
         </div>
       </section>
 
-      <section class="image-banner" aria-label="Lonestar Private Reserve banner">
-        <div class="image-banner-inner">
-          <img
-            src="assets/img/private-reserve-lsh.jpg"
-            alt="Lonestar Private Reserve banner"
-            loading="lazy"
-          />
-        </div>
-      </section>
-
       <section class="promo" aria-labelledby="private-reserve">
         <div class="promo-inner">
+          <div class="promo-media">
+            <figure class="banner-figure">
+              <img
+                src="assets/img/private-reserve-lsh.jpg"
+                alt="Lonestar Private Reserve banner graphic"
+                loading="lazy"
+              />
+            </figure>
+          </div>
           <div class="promo-copy">
             <p class="inline-pill">Lonestar Private Reserve</p>
             <h2 id="private-reserve">Private Reserve batches are in-store conversations</h2>
@@ -260,7 +272,7 @@
               Lonestar Private Reserve labels highlight select batches available in the shop. Staff can walk you through
               current options and show the matching QR-code details. Nothing leaves without clear origin information.
             </p>
-            <div class="action-buttons">
+            <div class="action-buttons button-row">
               <a class="button" href="#visit">Plan your visit</a>
               <a class="card-button" href="tel:+18308003213">Call the team</a>
             </div>
@@ -295,7 +307,7 @@
             <p class="micro">Hours may extend later on select nights (Thu–Sat) — call to confirm.</p>
           </div>
         </div>
-        <div class="contact-actions">
+        <div class="contact-actions button-row">
           <a
             class="button"
             href="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155"
