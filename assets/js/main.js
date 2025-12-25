@@ -6,13 +6,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menuToggle && nav) {
     let lastFocusedElement = null;
+    const desktopQuery = window.matchMedia('(min-width: 960px)');
+
+    const syncDesktopState = () => {
+      const isDesktop = desktopQuery.matches;
+      if (isDesktop) {
+        nav.classList.remove('open');
+        nav.setAttribute('aria-hidden', 'false');
+        body.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        if (navOverlay) {
+          navOverlay.classList.remove('visible');
+          navOverlay.setAttribute('aria-hidden', 'true');
+        }
+      } else if (!nav.classList.contains('open')) {
+        nav.setAttribute('aria-hidden', 'true');
+      }
+    };
+
+    syncDesktopState();
+    desktopQuery.addEventListener('change', syncDesktopState);
+
+    if (navOverlay) {
+      navOverlay.setAttribute('aria-hidden', 'true');
+    }
 
     const closeNav = () => {
       nav.classList.remove('open');
+      nav.setAttribute('aria-hidden', 'true');
       body.classList.remove('menu-open');
       menuToggle.setAttribute('aria-expanded', 'false');
       if (navOverlay) {
         navOverlay.classList.remove('visible');
+        navOverlay.setAttribute('aria-hidden', 'true');
       }
       menuToggle.focus();
       lastFocusedElement = null;
@@ -21,10 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const openNav = () => {
       lastFocusedElement = document.activeElement;
       nav.classList.add('open');
+      nav.setAttribute('aria-hidden', 'false');
       body.classList.add('menu-open');
       menuToggle.setAttribute('aria-expanded', 'true');
       if (navOverlay) {
         navOverlay.classList.add('visible');
+        navOverlay.setAttribute('aria-hidden', 'false');
       }
       const firstLink = nav.querySelector('a');
       if (firstLink) {
@@ -93,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (nav.classList.contains('open')) {
         closeNav();
       }
+      syncDesktopState();
     });
   }
 
