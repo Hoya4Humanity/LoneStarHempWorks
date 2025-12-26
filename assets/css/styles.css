@@ -44,6 +44,19 @@ body {
   min-height: 100vh;
 }
 
+.title-gradient {
+  background: linear-gradient(90deg, var(--accentGreen), var(--accentPurple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-solid {
+  color: var(--text);
+  -webkit-text-fill-color: var(--text);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -346,7 +359,6 @@ body.menu-open .nav-overlay {
 .hero h1 {
   margin: 0;
   font-size: clamp(2.6rem, 3vw + 1rem, 3.6rem);
-  color: var(--text);
   letter-spacing: -0.02em;
 }
 
@@ -362,6 +374,19 @@ body.menu-open .nav-overlay {
   color: var(--text);
   font-weight: 700;
   margin: 0.15rem 0 0.85rem;
+}
+
+.compliance-micro {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(23, 20, 42, 0.06);
+  color: var(--muted);
+  font-weight: 800;
+  width: fit-content;
+  box-shadow: inset 0 0 0 1px rgba(23, 20, 42, 0.08);
 }
 
 .hero .micro {
@@ -480,8 +505,8 @@ body.menu-open .nav-overlay {
 
 .compliance-note {
   max-width: var(--max-width);
-  margin: -0.5rem auto 1.5rem;
-  padding: 0.85rem 1rem;
+  margin: 2rem auto;
+  padding: 1rem 1.2rem;
   background: rgba(23, 20, 42, 0.04);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-md);
@@ -671,7 +696,6 @@ body.menu-open .nav-overlay {
 
 .page-hero h1 {
   margin: 0;
-  color: var(--text);
   font-size: clamp(2rem, 2vw + 1rem, 2.8rem);
 }
 
@@ -793,7 +817,7 @@ body.menu-open .nav-overlay {
   background: var(--card-bg);
   border: 1.5px solid rgba(45, 125, 79, 0.24);
   border-radius: var(--radius-md);
-  padding: 1.4rem;
+  padding: 1.2rem;
   box-shadow: var(--shadow-soft);
   position: relative;
   overflow: hidden;
@@ -1030,7 +1054,7 @@ body.menu-open .nav-overlay {
 .value-disclaimer {
   font-weight: 800;
   color: var(--muted);
-  border-left: 4px solid var(--brand-purple);
+  border-left: 4px solid rgba(47, 138, 80, 0.55);
   padding-left: 0.75rem;
 }
 
@@ -1093,7 +1117,7 @@ body.menu-open .nav-overlay {
   background: var(--card-bg);
   border: 1.5px solid rgba(45, 125, 79, 0.25);
   border-radius: var(--radius-md);
-  padding: 1.35rem;
+  padding: 1.2rem;
   box-shadow: var(--shadow-soft);
 }
 
@@ -1107,8 +1131,9 @@ body.menu-open .nav-overlay {
 .badge {
   display: inline-block;
   padding: 0.25rem 0.5rem;
-  background: var(--brand-purple);
-  color: white;
+  background: rgba(103, 82, 184, 0.12);
+  color: var(--accentPurpleDark);
+  box-shadow: inset 0 0 0 1px rgba(103, 82, 184, 0.18);
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -1139,8 +1164,10 @@ input[type="submit"] {
 }
 
 .button.secondary {
-  background: linear-gradient(135deg, var(--brand-purple), var(--brand-purple-dark));
-  color: white;
+  background: transparent;
+  color: var(--accentPurpleDark);
+  border: 1.5px solid rgba(103, 82, 184, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(103, 82, 184, 0.12);
 }
 
 .button:hover,
@@ -1151,6 +1178,11 @@ button:focus-visible,
 input[type="submit"]:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 14px 30px rgba(31, 31, 41, 0.16);
+}
+
+.button.secondary:hover,
+.button.secondary:focus-visible {
+  background: rgba(103, 82, 184, 0.08);
 }
 
 .form {
@@ -1209,8 +1241,8 @@ input[type="submit"]:focus-visible {
 }
 
 .banner {
-  background: var(--brand-purple);
-  color: white;
+  background: linear-gradient(135deg, rgba(47, 138, 80, 0.12), rgba(103, 82, 184, 0.1));
+  color: var(--text);
   padding: 0.65rem 1rem;
   border-radius: 10px;
   display: inline-block;
@@ -1312,9 +1344,9 @@ body.menu-open {
 }
 
 .alert {
-  border-left: 5px solid var(--brand-purple);
+  border-left: 5px solid var(--accentGreen);
   padding: 0.85rem 1rem;
-  background: rgba(90, 60, 138, 0.08);
+  background: rgba(47, 138, 80, 0.08);
   border-radius: 12px;
   font-weight: 700;
 }
