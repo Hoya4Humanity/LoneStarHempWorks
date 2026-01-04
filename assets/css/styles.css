@@ -403,6 +403,31 @@ body.menu-open .nav-overlay {
   display: grid;
   gap: 1.1rem;
   align-items: start;
+  justify-items: stretch;
+  max-width: 960px;
+  width: 100%;
+  justify-self: center;
+}
+
+.hero-banner {
+  margin: 0;
+  padding: 0.55rem;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+}
+
+.hero-banner picture,
+.hero-banner img {
+  width: 100%;
+  display: block;
+}
+
+.hero-banner img {
+  height: auto;
+  border-radius: calc(var(--radius-lg) - 8px);
+  background: var(--surface-soft);
 }
 
 .hero-panel {
@@ -725,6 +750,7 @@ body.menu-open .nav-overlay {
 .promo {
   background: var(--card-bg);
   border-block: 2px solid rgba(46, 138, 85, 0.2);
+  padding: var(--section-space) 1rem;
 }
 
 .promo-inner {
