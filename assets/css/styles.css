@@ -18,7 +18,7 @@
   --radius-lg: 18px;
   --radius-md: 12px;
   --radius-sm: 10px;
-  --section-space: 3.25rem;
+  --section-space: 3.4rem;
   --safe-top: max(env(safe-area-inset-top), 0px);
   --safe-bottom: max(env(safe-area-inset-bottom), 0px);
 
@@ -399,6 +399,27 @@ body.menu-open .nav-overlay {
   font-weight: 700;
 }
 
+.hero-media {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0.75rem auto 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.hero-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: clamp(220px, 34vh, 360px);
+  object-fit: contain;
+  object-position: center;
+}
+
 .hero-visual {
   display: grid;
   gap: 1.1rem;
@@ -428,6 +449,17 @@ body.menu-open .nav-overlay {
   height: auto;
   border-radius: calc(var(--radius-lg) - 8px);
   background: var(--surface-soft);
+}
+
+@media (max-width: 480px) {
+  .hero-media {
+    margin-top: 0.6rem;
+    border-radius: 16px;
+  }
+
+  .hero-media img {
+    max-height: 260px;
+  }
 }
 
 .hero-panel {
@@ -617,6 +649,13 @@ body.menu-open .nav-overlay {
   margin: 0 auto;
 }
 
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: 0.9rem;
+}
+
 .feature {
   padding: var(--section-space) 1rem;
   background: var(--surface);
@@ -796,6 +835,30 @@ body.menu-open .nav-overlay {
   padding: 3rem 1rem;
   background: var(--bg);
   border-block: 2px solid rgba(46, 138, 85, 0.24);
+}
+
+.section--private-reserve {
+  background: var(--bg);
+  border-block: 1.5px solid var(--border);
+}
+
+.section--private-reserve .section-inner {
+  gap: 1rem;
+}
+
+.media-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+}
+
+.media-card img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hempy-inner {
