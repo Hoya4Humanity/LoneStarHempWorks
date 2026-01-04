@@ -4,6 +4,7 @@
   --surface: #ffffff;
   --surface-soft: #f4efe2;
   --text: #17142a;
+  --ink: #17142a;
   --muted: #3f3c4f;
   --accentPurple: #6752b8;
   --accentPurpleDark: #4e3e9d;
@@ -44,17 +45,19 @@ body {
   min-height: 100vh;
 }
 
+h1,
 .title-gradient {
-  background: linear-gradient(90deg, var(--accentGreen), var(--accentPurple));
+  background-image: linear-gradient(90deg, var(--accentGreen), var(--accentPurple));
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: transparent !important;
   -webkit-text-fill-color: transparent;
 }
 
 .title-solid {
-  color: var(--text);
-  -webkit-text-fill-color: var(--text);
+  background: none !important;
+  color: var(--ink);
+  -webkit-text-fill-color: initial;
 }
 
 a {
@@ -292,6 +295,8 @@ body.menu-open .nav-overlay {
   min-height: 52px;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease,
     box-shadow 0.2s ease;
+  position: relative;
+  z-index: 1550;
 }
 
 .menu-toggle:hover,
@@ -497,9 +502,9 @@ body.menu-open .nav-overlay {
   gap: 0.35rem;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
-  background: rgba(107, 79, 179, 0.08);
-  color: var(--accentPurpleDark);
-  box-shadow: inset 0 0 0 1px rgba(107, 79, 179, 0.16);
+  background: rgba(23, 20, 42, 0.05);
+  color: var(--muted);
+  box-shadow: inset 0 0 0 1px rgba(23, 20, 42, 0.08);
   white-space: nowrap;
 }
 
@@ -1131,9 +1136,9 @@ body.menu-open .nav-overlay {
 .badge {
   display: inline-block;
   padding: 0.25rem 0.5rem;
-  background: rgba(103, 82, 184, 0.12);
-  color: var(--accentPurpleDark);
-  box-shadow: inset 0 0 0 1px rgba(103, 82, 184, 0.18);
+  background: rgba(47, 138, 80, 0.12);
+  color: var(--accentGreenDark);
+  box-shadow: inset 0 0 0 1px rgba(47, 138, 80, 0.18);
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -1166,8 +1171,9 @@ input[type="submit"] {
 .button.secondary {
   background: transparent;
   color: var(--accentPurpleDark);
-  border: 1.5px solid rgba(103, 82, 184, 0.4);
-  box-shadow: inset 0 0 0 1px rgba(103, 82, 184, 0.12);
+  border: 1.5px solid rgba(103, 82, 184, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(103, 82, 184, 0.08);
+  background: rgba(103, 82, 184, 0.04);
 }
 
 .button:hover,
@@ -1182,7 +1188,20 @@ input[type="submit"]:focus-visible {
 
 .button.secondary:hover,
 .button.secondary:focus-visible {
-  background: rgba(103, 82, 184, 0.08);
+  background: rgba(103, 82, 184, 0.12);
+}
+
+.hero .brand-line,
+.page-hero .brand-line {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.compliance-micro {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.95rem;
 }
 
 .form {
