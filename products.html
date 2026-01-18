@@ -25,6 +25,13 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
+      <div class="woodgrain-slogan">
+        <img
+          src="assets/img/woodgrain-slogan.png"
+          alt="Your Green in the Heart of Seguin"
+          onerror="this.remove();"
+        />
+      </div>
       <div class="navbar">
         <div class="nav-group">
           <button
@@ -66,13 +73,30 @@
     </header>
 
     <main id="main">
-      <section class="page-hero" aria-labelledby="products-hero">
-        <div class="page-hero-inner">
-          <p class="page-note">Forest-green shop standards</p>
-          <div class="hero-signboard">
-            <h1 class="title-gradient" id="products-hero">Product categories with in-store guidance</h1>
-            <p>Browse categories, then talk with the team in person. Everything is tested, labeled, and backed by QR codes.</p>
+      <section class="page-hero" aria-label="Lone Star Hempworks hero">
+        <div class="page-hero__inner">
+          <div class="page-hero__frame">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
+              />
+              <img
+                src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
+                alt="Lone Star Hempworks - Hempy mascot on a vintage western street"
+                width="2320"
+                height="1100"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </picture>
           </div>
+        </div>
+      </section>
+      <section class="page-title" aria-labelledby="products-hero">
+        <div class="page-title__inner">
+          <h1 id="products-hero">Products</h1>
         </div>
       </section>
 
