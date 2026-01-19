@@ -25,12 +25,16 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="woodgrain-slogan">
+      <div class="topbar-slogan">
         <img
-          src="assets/img/woodgrain-slogan.png"
+          class="top-slogan"
+          src="assets/img/your-green-titlebar.png"
           alt="Your Green in the Heart of Seguin"
-          onerror="this.remove();"
+          loading="eager"
+          decoding="async"
+          onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
         />
+        <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
       </div>
       <div class="navbar">
         <div class="nav-group">
@@ -74,24 +78,22 @@
 
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks hero">
-        <div class="page-hero__inner">
-          <div class="page-hero__frame">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
-              />
-              <img
-                src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
-                alt="Lone Star Hempworks - Hempy mascot on a vintage western street"
-                width="2320"
-                height="1100"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              />
-            </picture>
-          </div>
+        <div class="page-hero__frame">
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
+            />
+            <img
+              src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
+              alt="Hempy and the Lone Star Hempworks logo on a vintage western street"
+              width="2320"
+              height="1100"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
       </section>
       <section class="page-title" aria-labelledby="legal-hero">
@@ -108,8 +110,8 @@
           <div class="info-card">
             <h3>21+ only</h3>
             <ul class="highlight-list">
-              <li>Purchases are for adults 21 and older.</li>
-              <li>Valid ID may be required in store.</li>
+              <li>Purchases are for adults 21+.</li>
+              <li>Valid ID may be required in-store.</li>
             </ul>
           </div>
           <div class="info-card">
@@ -123,26 +125,26 @@
           </div>
           <div class="info-card">
             <h3>No medical claims</h3>
-            <p>We do not provide medical advice. Consult a healthcare professional with questions.</p>
+            <p>We do not provide medical advice or claims. Consult a healthcare professional with questions.</p>
           </div>
           <div class="info-card">
             <h3>Retail only</h3>
-            <p>Nothing for sale online. All purchases happen in-store with ID verification. We do not ship products.</p>
+            <p>No online sales or shipping. All purchases happen in-store with ID verification.</p>
           </div>
           <div class="info-card">
             <h3>FDA disclaimer</h3>
             <p>
               Statements on this site have not been evaluated by the Food and Drug Administration.
-              Products are not reviewed for medical use or disease prevention.
+              Products are not intended for medical use or disease prevention.
             </p>
           </div>
           <div class="info-card">
             <h3>Lab transparency</h3>
-            <p>Certificates of Analysis (COAs) / lab reports are available. Online hub coming soon.</p>
+            <p>Certificates of Analysis (COAs) / lab reports are available in-store. Online hub coming soon.</p>
           </div>
           <div class="info-card">
             <h3>Mushroom education only</h3>
-            <p>Our mushroom-based items are legal, tested, and offered with macro vs. micro serving explanations—not as health claims.</p>
+            <p>Mushroom-based items are legal, tested, and offered with macro vs. micro serving explanations—not as health claims.</p>
           </div>
           <div class="info-card">
             <h3>Brand clarity</h3>

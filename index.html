@@ -42,15 +42,19 @@
       }
     </script>
   </head>
-  <body>
+  <body class="home">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="woodgrain-slogan">
+      <div class="topbar-slogan">
         <img
-          src="assets/img/woodgrain-slogan.png"
+          class="top-slogan"
+          src="assets/img/your-green-titlebar.png"
           alt="Your Green in the Heart of Seguin"
-          onerror="this.remove();"
+          loading="eager"
+          decoding="async"
+          onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
         />
+        <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
       </div>
       <div class="navbar">
         <div class="nav-group">
@@ -94,24 +98,22 @@
 
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks hero">
-        <div class="page-hero__inner">
-          <div class="page-hero__frame">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
-              />
-              <img
-                src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
-                alt="Lone Star Hempworks - Hempy mascot on a vintage western street"
-                width="2320"
-                height="1100"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              />
-            </picture>
-          </div>
+        <div class="page-hero__frame">
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
+            />
+            <img
+              src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
+              alt="Hempy and the Lone Star Hempworks logo on a vintage western street"
+              width="2320"
+              height="1100"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
       </section>
       <section class="hero" aria-labelledby="site-intro">
@@ -121,7 +123,7 @@
               <p class="eyebrow">YOUR GREEN IN THE HEART OF SEGUIN.</p>
               <h1 class="title-gradient" id="site-intro">Texas-based. People-first.</h1>
               <p class="tagline">Education-forward hemp with QR-backed proof.</p>
-              <p class="subline">Walk in, ask anything, and leave informed. No rushed choices.</p>
+              <p class="subline">Walk in, ask anything, leave informed. No rushed choices.</p>
             </div>
             <div class="hero-actions button-row">
               <a class="button" href="#visit">Plan your visit</a>

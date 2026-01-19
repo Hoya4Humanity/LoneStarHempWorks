@@ -25,12 +25,16 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="woodgrain-slogan">
+      <div class="topbar-slogan">
         <img
-          src="assets/img/woodgrain-slogan.png"
+          class="top-slogan"
+          src="assets/img/your-green-titlebar.png"
           alt="Your Green in the Heart of Seguin"
-          onerror="this.remove();"
+          loading="eager"
+          decoding="async"
+          onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
         />
+        <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
       </div>
       <div class="navbar">
         <div class="nav-group">
@@ -74,24 +78,22 @@
 
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks hero">
-        <div class="page-hero__inner">
-          <div class="page-hero__frame">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
-              />
-              <img
-                src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
-                alt="Lone Star Hempworks - Hempy mascot on a vintage western street"
-                width="2320"
-                height="1100"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              />
-            </picture>
-          </div>
+        <div class="page-hero__frame">
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
+            />
+            <img
+              src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
+              alt="Hempy and the Lone Star Hempworks logo on a vintage western street"
+              width="2320"
+              height="1100"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
       </section>
       <section class="page-title" aria-labelledby="about-hero">
@@ -103,26 +105,26 @@
       <section class="section narrow" aria-labelledby="about-heading">
         <h2 id="about-heading">About Lone Star Hempworks</h2>
         <p>
-          Lone Star Hempworks is an in-person shop—local, approachable, and committed to compliant education. We keep
-          conversations private, highlight QR-code lab results, and welcome regulation that keeps products tested and
+          Lone Star Hempworks is a local, in-person shop built on calm guidance and compliant education. We keep
+          conversations private, spotlight QR-backed lab results, and welcome standards that keep products tested and
           transparent.
         </p>
         <div class="info-grid">
           <div class="info-card">
             <h3>Guidance promise</h3>
-            <p>No pressure. No judgment. Just straightforward information about what’s available in-store.</p>
+            <p>No pressure. No judgment. Just clear info about what's available in-store.</p>
           </div>
           <div class="info-card">
             <h3>How we help</h3>
-            <p>Walkthroughs of formats, clear macro vs. micro serving explanations, and transparent lab results you can scan.</p>
+            <p>Format walkthroughs, macro vs. micro serving explanations, and QR-backed lab results.</p>
           </div>
           <div class="info-card">
             <h3>Community roots</h3>
-            <p>We highlight local makers, support veterans/first responders, and keep the shop welcoming for everyone.</p>
+            <p>We spotlight local makers, support veterans/first responders, and keep the shop welcoming for everyone.</p>
           </div>
           <div class="info-card">
             <h3>Value without hype</h3>
-            <p>Down-to-earth pricing on flower, concentrates, infused drinks/edibles, and topicals & tinctures—always framed with transparency.</p>
+            <p>Down-to-earth pricing on flower, concentrates, infused drinks/edibles, and topicals & tinctures—with transparency.</p>
           </div>
         </div>
       </section>
