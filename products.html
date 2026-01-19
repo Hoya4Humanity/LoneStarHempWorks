@@ -25,12 +25,16 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="woodgrain-slogan">
+      <div class="topbar-slogan">
         <img
-          src="assets/img/woodgrain-slogan.png"
+          class="top-slogan"
+          src="assets/img/your-green-titlebar.png"
           alt="Your Green in the Heart of Seguin"
-          onerror="this.remove();"
+          loading="eager"
+          decoding="async"
+          onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
         />
+        <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
       </div>
       <div class="navbar">
         <div class="nav-group">
@@ -74,24 +78,22 @@
 
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks hero">
-        <div class="page-hero__inner">
-          <div class="page-hero__frame">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
-              />
-              <img
-                src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
-                alt="Lone Star Hempworks - Hempy mascot on a vintage western street"
-                width="2320"
-                height="1100"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              />
-            </picture>
-          </div>
+        <div class="page-hero__frame">
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
+            />
+            <img
+              src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
+              alt="Hempy and the Lone Star Hempworks logo on a vintage western street"
+              width="2320"
+              height="1100"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
       </section>
       <section class="page-title" aria-labelledby="products-hero">
@@ -104,25 +106,25 @@
         <p class="inline-pill">Product categories</p>
         <h2 id="products-heading">Explore categories with in-store guidance</h2>
         <p>
-          Skip gas-station mystery hemp—choose tested, labeled products with QR transparency. Talk with the team for pacing
-          tips, format explanations, and a walkthrough of current specials when you arrive.
+          Skip mystery hemp. Choose tested, labeled products with QR transparency. Talk with the team for pacing tips,
+          format explanations, and a quick walkthrough of today's specials.
         </p>
         <div class="info-grid" aria-label="Product categories">
           <div class="category-card">
             <h3>Flower variety</h3>
-            <p>Rotating strains and larger-format value picks. Ask what's featured today and scan the matching QR.</p>
+            <p>Rotating strains and value picks. Ask what's featured today and scan the matching QR.</p>
           </div>
           <div class="category-card">
             <h3>Pre-rolls</h3>
-            <p>Easy, ready-to-enjoy options with clear labeling and QR-code details available in-store.</p>
+            <p>Ready-to-enjoy options with clear labeling and in-store QR details.</p>
           </div>
           <div class="category-card">
             <h3>Concentrates</h3>
-            <p>Daily concentrate options with terpene notes and lab info ready to review together.</p>
+            <p>Daily concentrates with terpene notes and lab info ready to review together.</p>
           </div>
           <div class="category-card">
             <h3>Infused drinks & edibles</h3>
-            <p>Quality infused beverages and edibles with straightforward serving guidance and compliant pacing tips.</p>
+            <p>Infused beverages and edibles with straightforward serving guidance and pacing tips.</p>
           </div>
           <div class="category-card">
             <h3>Topicals</h3>
@@ -130,11 +132,11 @@
           </div>
           <div class="category-card">
             <h3>Tinctures</h3>
-            <p>Clear dropper and serving information shared in-store with QR-code lab results.</p>
+            <p>Clear dropper and serving info shared in-store with QR-backed lab results.</p>
           </div>
           <div class="category-card">
             <h3>Mushroom-based products</h3>
-            <p>Educational-only guidance on legal, tested mushroom-based products. Macro vs. micro dosing distinctions explained.</p>
+            <p>Education-only guidance on legal, tested mushroom-based products. Macro vs. micro serving distinctions explained.</p>
           </div>
           <div class="category-card">
             <h3>Lone Star Private Reserve</h3>

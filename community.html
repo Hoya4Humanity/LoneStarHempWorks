@@ -25,12 +25,16 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="woodgrain-slogan">
+      <div class="topbar-slogan">
         <img
-          src="assets/img/woodgrain-slogan.png"
+          class="top-slogan"
+          src="assets/img/your-green-titlebar.png"
           alt="Your Green in the Heart of Seguin"
-          onerror="this.remove();"
+          loading="eager"
+          decoding="async"
+          onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
         />
+        <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
       </div>
       <div class="navbar">
         <div class="nav-group">
@@ -74,24 +78,22 @@
 
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks hero">
-        <div class="page-hero__inner">
-          <div class="page-hero__frame">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
-              />
-              <img
-                src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
-                alt="Lone Star Hempworks - Hempy mascot on a vintage western street"
-                width="2320"
-                height="1100"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              />
-            </picture>
-          </div>
+        <div class="page-hero__frame">
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
+            />
+            <img
+              src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
+              alt="Hempy and the Lone Star Hempworks logo on a vintage western street"
+              width="2320"
+              height="1100"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
       </section>
       <section class="page-title" aria-labelledby="community-hero">
@@ -102,23 +104,23 @@
 
       <section class="section narrow" aria-labelledby="community-heading">
         <h2 id="community-heading">Community hub</h2>
-        <p>Celebrating local makers, collaborations, and Seguin neighbors who keep things vibrant.</p>
+        <p>Local makers, small batches, big heart. We spotlight Seguin neighbors and Texas creators.</p>
         <div class="info-grid">
           <div class="community-card">
             <h3>Honey spotlight</h3>
-            <p>Local honey with rich flavor, perfect for tea, toast, or gifting.</p>
+            <p>Golden, local, and giftable. Ask what’s in season.</p>
           </div>
           <div class="community-card">
             <h3>Salsa spotlight</h3>
-            <p>Small-batch salsa crafted nearby — bold, shareable, and Texas proud.</p>
+            <p>Small-batch heat with real flavor. Grab a jar for the table.</p>
           </div>
           <div class="community-card">
             <h3>Handblown glass</h3>
-            <p>Artful pieces from regional artists, each with its own character.</p>
+            <p>One-of-one pieces from regional artists.</p>
           </div>
           <div class="community-card">
             <h3>Future maker slots</h3>
-            <p>More spotlights coming soon. Have something special? Let us know.</p>
+            <p>Want a spotlight? Pitch us your goods.</p>
           </div>
         </div>
       </section>
@@ -134,15 +136,15 @@
         <div class="info-grid">
           <div class="community-card">
             <h3>Discounts</h3>
-            <p>Veterans, active military, law enforcement, and first responders receive in-store discounts.</p>
+            <p>In-store discounts for veterans, active military, law enforcement, and first responders.</p>
           </div>
           <div class="community-card">
             <h3>Easy access</h3>
-            <p>Private, pressure-free guidance with time to ask every question in person.</p>
+            <p>Private, pressure-free guidance with time for every question in person.</p>
           </div>
           <div class="community-card">
             <h3>Transparency</h3>
-            <p>QR codes, lab reports, and tested products only. We welcome regulation and high standards.</p>
+            <p>QR codes, lab reports, and tested products only. We welcome high standards.</p>
           </div>
         </div>
       </section>
