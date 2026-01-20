@@ -486,6 +486,13 @@ body.menu-open .nav-overlay {
   background: var(--hero-bg);
 }
 
+.hero-kicker {
+  text-align: center;
+  margin: 0.85rem auto 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 640px) {
   .page-hero {
     margin: 8px auto 10px;
@@ -1229,6 +1236,25 @@ body.menu-open .nav-overlay {
   box-shadow: var(--shadow-soft);
   display: grid;
   gap: 0.6rem;
+}
+
+.hours-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hours-card__header h3 {
+  margin: 0;
+}
+
+.hours-card__icon {
+  font-size: 1.1rem;
+}
+
+.hours-card__divider {
+  height: 1px;
+  background: rgba(45, 125, 79, 0.2);
 }
 
 .hours-card__rows {
