@@ -25,18 +25,18 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="topbar-slogan">
-        <img
-          class="top-slogan"
-          src="assets/img/your-green-titlebar.png"
-          alt="Your Green in the Heart of Seguin"
-          loading="eager"
-          decoding="async"
-          onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
-        />
-        <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
-      </div>
-      <div class="navbar">
+      <div class="titlebar">
+        <div class="topbar-slogan">
+          <img
+            class="top-slogan"
+            src="assets/img/your-green-titlebar.png"
+            alt="Your Green in the Heart of Seguin"
+            loading="eager"
+            decoding="async"
+            onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
+          />
+          <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
+        </div>
         <div class="nav-group">
           <button
             class="menu-toggle"
@@ -69,6 +69,7 @@
               <li><a class="active" href="products.html" aria-current="page">Products</a></li>
               <li><a href="legal.html">Legal</a></li>
               <li><a href="contact.html">Contact</a></li>
+              <li><a href="#instagram" data-instagram>Instagram</a></li>
             </ul>
           </nav>
           <div class="nav-overlay" aria-hidden="true"></div>
@@ -79,21 +80,15 @@
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks hero">
         <div class="page-hero__frame">
-          <picture>
-            <source
-              media="(max-width: 640px)"
-              srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
-            />
-            <img
-              src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
-              alt="Hempy and the Lone Star Hempworks logo on a vintage western street"
-              width="2320"
-              height="1100"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </picture>
+          <img
+            src="assets/img/lonestar-hero.webp"
+            alt="Lone Star Hempworks storefront banner with Hempy on a vintage western street"
+            width="2400"
+            height="700"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
       </section>
       <section class="page-title" aria-labelledby="products-hero">
@@ -104,54 +99,54 @@
 
       <section class="section narrow" aria-labelledby="products-heading">
         <p class="inline-pill">Product categories</p>
-        <h2 id="products-heading">Explore categories with in-store guidance</h2>
+        <h2 id="products-heading">What we carry</h2>
         <p>
-          Skip mystery hemp. Choose tested, labeled products with QR transparency. Talk with the team for pacing tips,
-          format explanations, and a quick walkthrough of today's specials.
+          A curated counter, rotating highlights, and staff that explains options without pressure.
         </p>
         <div class="info-grid" aria-label="Product categories">
           <div class="category-card">
             <h3>Flower variety</h3>
-            <p>Rotating strains and value picks. Ask what's featured today and scan the matching QR.</p>
+            <p>Rotating strains and value picks. Ask what’s featured today.</p>
           </div>
           <div class="category-card">
             <h3>Pre-rolls</h3>
-            <p>Ready-to-enjoy options with clear labeling and in-store QR details.</p>
+            <p>Ready-to-enjoy options with clear labeling and an easy pace.</p>
           </div>
           <div class="category-card">
             <h3>Concentrates</h3>
-            <p>Daily concentrates with terpene notes and lab info ready to review together.</p>
+            <p>Daily concentrates with terpene notes and staff guidance on format.</p>
           </div>
           <div class="category-card">
             <h3>Infused drinks & edibles</h3>
-            <p>Infused beverages and edibles with straightforward serving guidance and pacing tips.</p>
+            <p>Infused beverages and edibles with straightforward serving guidance.</p>
           </div>
           <div class="category-card">
             <h3>Topicals</h3>
-            <p>Creams, balms, salves, lotions, and other topical formats with ingredient transparency.</p>
+            <p>Creams, balms, salves, lotions, and other topical formats with ingredient clarity.</p>
           </div>
           <div class="category-card">
             <h3>Tinctures</h3>
-            <p>Clear dropper and serving info shared in-store with QR-backed lab results.</p>
+            <p>Clear dropper and serving info shared in-store.</p>
           </div>
           <div class="category-card">
             <h3>Mushroom-based products</h3>
-            <p>Education-only guidance on legal, tested mushroom-based products. Macro vs. micro serving distinctions explained.</p>
+            <p>Education-only guidance on legal, tested mushroom-based products.</p>
           </div>
           <div class="category-card">
             <h3>Lone Star Private Reserve</h3>
-            <p>Ask about Lone Star Private Reserve labels and batches. Availability varies; QR codes ready to scan.</p>
+            <p>Ask about Lone Star Private Reserve labels and batches. Availability varies.</p>
           </div>
         </div>
       </section>
 
       <section class="section narrow" aria-labelledby="transparency-note">
         <p class="inline-pill">Transparency &amp; safety</p>
-        <h2 id="transparency-note">Lab visibility and clear expectations</h2>
+        <h2 id="transparency-note">Batch cards and clear expectations</h2>
+        <p>Every product has a batch card. We’ll walk you through it in plain language.</p>
         <div class="card-grid">
           <div class="card-tile">
-            <h3>QR codes on every product</h3>
-            <p>Review batch information and ingredients on-site. Staff can help interpret lab reports.</p>
+            <h3>Tested and labeled</h3>
+            <p>Review batch information and ingredients on-site.</p>
           </div>
           <div class="card-tile">
             <h3>Guided conversations</h3>
@@ -169,7 +164,7 @@
         </div>
         <div>
           <a href="legal.html">Legal</a> · <a href="contact.html">Contact</a> ·
-          <a href="#">Facebook (coming soon)</a>
+          <a href="#instagram" data-instagram>Instagram</a>
         </div>
       </div>
     </footer>

@@ -25,18 +25,18 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="topbar-slogan">
-        <img
-          class="top-slogan"
-          src="assets/img/your-green-titlebar.png"
-          alt="Your Green in the Heart of Seguin"
-          loading="eager"
-          decoding="async"
-          onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
-        />
-        <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
-      </div>
-      <div class="navbar">
+      <div class="titlebar">
+        <div class="topbar-slogan">
+          <img
+            class="top-slogan"
+            src="assets/img/your-green-titlebar.png"
+            alt="Your Green in the Heart of Seguin"
+            loading="eager"
+            decoding="async"
+            onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
+          />
+          <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
+        </div>
         <div class="nav-group">
           <button
             class="menu-toggle"
@@ -69,6 +69,7 @@
               <li><a href="products.html">Products</a></li>
               <li><a href="legal.html">Legal</a></li>
               <li><a href="contact.html">Contact</a></li>
+              <li><a href="#instagram" data-instagram>Instagram</a></li>
             </ul>
           </nav>
           <div class="nav-overlay" aria-hidden="true"></div>
@@ -79,21 +80,15 @@
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks hero">
         <div class="page-hero__frame">
-          <picture>
-            <source
-              media="(max-width: 640px)"
-              srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
-            />
-            <img
-              src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
-              alt="Hempy and the Lone Star Hempworks logo on a vintage western street"
-              width="2320"
-              height="1100"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </picture>
+          <img
+            src="assets/img/lonestar-hero.webp"
+            alt="Lone Star Hempworks storefront banner with Hempy on a vintage western street"
+            width="2400"
+            height="700"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
       </section>
       <section class="page-title" aria-labelledby="community-hero">
@@ -104,7 +99,7 @@
 
       <section class="section narrow" aria-labelledby="community-heading">
         <h2 id="community-heading">Community hub</h2>
-        <p>Local makers, small batches, big heart. We spotlight Seguin neighbors and Texas creators.</p>
+        <p>Local makers, small batches, big heart. We spotlight Seguin neighbors and Texas creators worth knowing.</p>
         <div class="info-grid">
           <div class="community-card">
             <h3>Honey spotlight</h3>
@@ -144,7 +139,7 @@
           </div>
           <div class="community-card">
             <h3>Transparency</h3>
-            <p>QR codes, lab reports, and tested products only. We welcome high standards.</p>
+            <p>Tested products only, with straight answers and clear sourcing expectations.</p>
           </div>
         </div>
       </section>
@@ -191,7 +186,7 @@
         </div>
         <div>
           <a href="legal.html">Legal</a> · <a href="contact.html">Contact</a> ·
-          <a href="#">Facebook (coming soon)</a>
+          <a href="#instagram" data-instagram>Instagram</a>
         </div>
       </div>
     </footer>
