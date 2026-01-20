@@ -26,17 +26,6 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="titlebar">
-        <div class="topbar-slogan">
-          <img
-            class="top-slogan"
-            src="assets/img/your-green-titlebar.png"
-            alt="Your Green in the Heart of Seguin"
-            loading="eager"
-            decoding="async"
-            onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
-          />
-          <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
-        </div>
         <div class="nav-group">
           <button
             class="menu-toggle"
@@ -64,12 +53,12 @@
           >
             <ul>
               <li><a href="index.html">Home</a></li>
+              <li><a href="#instagram" data-instagram>Instagram — daily drops &amp; community</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="community.html">Community</a></li>
               <li><a href="products.html">Products</a></li>
               <li><a href="legal.html">Legal</a></li>
               <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
-              <li><a href="#instagram" data-instagram>Instagram</a></li>
             </ul>
           </nav>
           <div class="nav-overlay" aria-hidden="true"></div>
@@ -91,6 +80,7 @@
           />
         </div>
       </section>
+      <p class="brand-line hero-kicker">YOUR GREEN IN THE HEART OF SEGUIN.</p>
       <section class="page-title" aria-labelledby="contact-hero">
         <div class="page-title__inner">
           <h1 id="contact-hero">Contact</h1>
@@ -123,7 +113,11 @@
             <p><a href="mailto:lonestarhempworks@gmail.com">lonestarhempworks@gmail.com</a></p>
           </div>
           <div class="hours-card">
-            <h3>Hours</h3>
+            <div class="hours-card__header">
+              <span class="hours-card__icon" aria-hidden="true">⏰</span>
+              <h3>Hours &amp; Visit</h3>
+            </div>
+            <div class="hours-card__divider" aria-hidden="true"></div>
             <div class="hours-card__rows">
               <div class="hours-row"><span>Mon–Sat</span><span>9:00 AM – 10:00 PM</span></div>
               <div class="hours-row"><span>Sun</span><span>10:00 AM – 8:00 PM</span></div>
@@ -142,7 +136,7 @@
           </a>
           <a class="button secondary" href="tel:+18308003213">Call</a>
           <a class="card-button" href="mailto:lonestarhempworks@gmail.com">Email</a>
-          <a class="card-button" href="#instagram" data-instagram>Instagram</a>
+          <a class="card-button" href="#instagram" data-instagram>Daily drops &amp; community</a>
         </div>
         <div class="map-card" aria-label="Map to Lone Star Hempworks">
           <iframe
