@@ -1,8 +1,17 @@
+const INSTAGRAM_URL = '#instagram';
+
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-nav');
   const navOverlay = document.querySelector('.nav-overlay');
   const body = document.body;
+  const instagramLinks = document.querySelectorAll('[data-instagram]');
+
+  instagramLinks.forEach((link) => {
+    link.setAttribute('href', INSTAGRAM_URL);
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noreferrer noopener');
+  });
 
   if (menuToggle && nav) {
     let lastFocusedElement = null;

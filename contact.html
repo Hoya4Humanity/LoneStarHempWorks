@@ -25,18 +25,18 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="topbar-slogan">
-        <img
-          class="top-slogan"
-          src="assets/img/your-green-titlebar.png"
-          alt="Your Green in the Heart of Seguin"
-          loading="eager"
-          decoding="async"
-          onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
-        />
-        <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
-      </div>
-      <div class="navbar">
+      <div class="titlebar">
+        <div class="topbar-slogan">
+          <img
+            class="top-slogan"
+            src="assets/img/your-green-titlebar.png"
+            alt="Your Green in the Heart of Seguin"
+            loading="eager"
+            decoding="async"
+            onerror="this.closest('.topbar-slogan').classList.add('show-fallback'); this.remove();"
+          />
+          <span class="top-slogan-fallback">YOUR GREEN IN THE HEART OF SEGUIN.</span>
+        </div>
         <div class="nav-group">
           <button
             class="menu-toggle"
@@ -69,6 +69,7 @@
               <li><a href="products.html">Products</a></li>
               <li><a href="legal.html">Legal</a></li>
               <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+              <li><a href="#instagram" data-instagram>Instagram</a></li>
             </ul>
           </nav>
           <div class="nav-overlay" aria-hidden="true"></div>
@@ -79,21 +80,15 @@
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks hero">
         <div class="page-hero__frame">
-          <picture>
-            <source
-              media="(max-width: 640px)"
-              srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG"
-            />
-            <img
-              src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
-              alt="Hempy and the Lone Star Hempworks logo on a vintage western street"
-              width="2320"
-              height="1100"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </picture>
+          <img
+            src="assets/img/lonestar-hero.webp"
+            alt="Lone Star Hempworks storefront banner with Hempy on a vintage western street"
+            width="2400"
+            height="700"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
       </section>
       <section class="page-title" aria-labelledby="contact-hero">
@@ -104,12 +99,20 @@
 
       <section class="section narrow" aria-labelledby="contact-heading">
         <p class="inline-pill">Visit or reach out</p>
-        <h2 id="contact-heading">Contact Lone Star Hempworks</h2>
+        <h2 id="contact-heading">Reach the shop</h2>
         <p>Questions welcome. We’ll confirm availability and help you choose in person, no pressure.</p>
         <div class="info-grid">
           <div class="info-card">
             <h3>Address</h3>
-            <p>633 E Court St, Seguin, TX 78155</p>
+            <p>
+              <a
+                href="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                633 E Court St, Seguin, TX 78155
+              </a>
+            </p>
           </div>
           <div class="info-card">
             <h3>Phone</h3>
@@ -119,13 +122,13 @@
             <h3>Email</h3>
             <p><a href="mailto:lonestarhempworks@gmail.com">lonestarhempworks@gmail.com</a></p>
           </div>
-          <div class="info-card">
+          <div class="hours-card">
             <h3>Hours</h3>
-            <ul class="hours-list">
-              <li><span>Mon–Sat</span><span>9:00 AM – 10:00 PM</span></li>
-              <li><span>Sun</span><span>10:00 AM – 8:00 PM</span></li>
-            </ul>
-            <p class="micro">Hours may extend later on select nights (Thu–Sat) — call to confirm.</p>
+            <div class="hours-card__rows">
+              <div class="hours-row"><span>Mon–Sat</span><span>9:00 AM – 10:00 PM</span></div>
+              <div class="hours-row"><span>Sun</span><span>10:00 AM – 8:00 PM</span></div>
+            </div>
+            <p class="hours-card__note">Hours may extend Thu–Sat. Call to confirm.</p>
           </div>
         </div>
         <div class="contact-actions button-row">
@@ -135,10 +138,20 @@
             target="_blank"
             rel="noreferrer noopener"
           >
-            Get Directions
+            Get directions
           </a>
-          <a class="button secondary" href="tel:+18308003213">Call Now</a>
+          <a class="button secondary" href="tel:+18308003213">Call</a>
           <a class="card-button" href="mailto:lonestarhempworks@gmail.com">Email</a>
+          <a class="card-button" href="#instagram" data-instagram>Instagram</a>
+        </div>
+        <div class="map-card" aria-label="Map to Lone Star Hempworks">
+          <iframe
+            title="Map to Lone Star Hempworks"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155&output=embed"
+          ></iframe>
         </div>
       </section>
 
@@ -182,7 +195,7 @@
         </div>
         <div>
           <a href="legal.html">Legal</a> · <a href="contact.html">Contact</a> ·
-          <a href="#">Facebook (coming soon)</a>
+          <a href="#instagram" data-instagram>Instagram</a>
         </div>
       </div>
     </footer>
