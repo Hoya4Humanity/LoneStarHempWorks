@@ -1,4 +1,4 @@
-const INSTAGRAM_URL = '#instagram';
+const INSTAGRAM_URL = 'https://instagram.com/lonestarhempworks';
 
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
