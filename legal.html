@@ -67,20 +67,20 @@
     </header>
 
     <main id="main">
-      <section class="page-hero" aria-label="Lone Star Hempworks hero">
-        <div class="page-hero__frame">
-          <img
-            src="assets/img/lonestar-hero.webp"
-            alt="Lone Star Hempworks storefront banner with Hempy on a vintage western street"
-            width="2400"
-            height="700"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+      <section class="hero" aria-label="Lone Star Hempworks hero">
+        <div class="hero-media">
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/img/hempy-hero-mobile.png" />
+            <img
+              src="assets/img/hempy-hero-web.png"
+              alt="Lone Star Hempworks hero banner featuring Hempy"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
         </div>
       </section>
-      <p class="brand-line hero-kicker">YOUR GREEN IN THE HEART OF SEGUIN.</p>
+      <p class="slogan">YOUR GREEN IN THE HEART OF SEGUIN.</p>
       <section class="page-title" aria-labelledby="legal-hero">
         <div class="page-title__inner">
           <h1 id="legal-hero">Legal</h1>
@@ -90,8 +90,7 @@
       <section class="section narrow" aria-labelledby="legal-heading">
         <h2 id="legal-heading">Safety &amp; compliance</h2>
         <p class="notice">
-          Adults 21+ only. Valid ID may be required. We follow Texas rules and keep it straightforward. Lab reports are
-          available via QR-linked batch cards in-store.
+          Adults 21+ only. Valid ID may be required. We follow Texas rules and keep it straightforward.
         </p>
 
         <div class="info-grid">

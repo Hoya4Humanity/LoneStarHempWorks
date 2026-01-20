@@ -35,7 +35,7 @@
           "postalCode": "78155",
           "addressCountry": "US"
         },
-        "sameAs": ["#instagram"]
+        "sameAs": ["https://instagram.com/lonestarhempworks"]
       }
     </script>
   </head>
@@ -84,29 +84,38 @@
     </header>
 
     <main id="main">
-      <section class="page-hero" aria-label="Lone Star Hempworks hero">
-        <div class="page-hero__frame">
-          <img
-            src="assets/img/lonestar-hero.webp"
-            alt="Lone Star Hempworks storefront banner with Hempy on a vintage western street"
-            width="2400"
-            height="700"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+      <section class="hero" aria-label="Lone Star Hempworks hero">
+        <div class="hero-media">
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/img/hempy-hero-mobile.png" />
+            <img
+              src="assets/img/hempy-hero-web.png"
+              alt="Lone Star Hempworks hero banner featuring Hempy"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
         </div>
       </section>
-      <p class="brand-line hero-kicker">YOUR GREEN IN THE HEART OF SEGUIN.</p>
-      <section class="hero" aria-labelledby="site-intro">
+      <p class="slogan">YOUR GREEN IN THE HEART OF SEGUIN.</p>
+      <section class="hero-content" aria-labelledby="site-intro">
         <div class="hero-inner">
           <div class="hero-copy">
             <div class="hero-signboard">
               <h1 class="title-gradient" id="site-intro">Texas-based. People-first.</h1>
               <p class="subline">
-                Walk in, ask anything, leave informed. QR-linked batch cards are available in-store for quick checks,
-                alongside calm guidance and products you can understand.
+                Education-forward hemp with QR-backed proof.
               </p>
+              <p>
+                Lone Star Hempworks is a local, in-person shop built on calm guidance and compliant education. We’re here
+                for everyone, from a 21-year-old college student to an elder who just wants clear answers. No pressure.
+                Just friendly help, quality products, and a community-first vibe.
+              </p>
+              <ul class="highlight-list hero-list">
+                <li>Welcoming to all adults 21+</li>
+                <li>Clear info, calm pace, no rush</li>
+                <li>Local goods spotlighted alongside hemp essentials</li>
+              </ul>
             </div>
             <div class="hero-actions button-row">
               <a class="button" href="#visit">Plan your visit</a>
@@ -126,21 +135,70 @@
         </div>
       </section>
 
+      <section id="visit" class="section" aria-labelledby="visit-heading">
+        <h2 id="visit-heading">Plan your visit</h2>
+
+        <div class="visit-grid">
+          <div class="card">
+            <h3>Find us</h3>
+            <p class="muted">
+              Lone Star Hempworks<br />
+              Seguin, Texas
+            </p>
+
+            <div class="button-row">
+              <a class="button" href="tel:+18308003213">Call</a>
+              <a
+                class="button secondary"
+                href="https://www.google.com/maps/search/?api=1&query=Lone+Star+Hempworks+Seguin+TX"
+                target="_blank"
+                rel="noopener"
+              >
+                Directions
+              </a>
+              <a class="card-button" href="#instagram" data-instagram>Instagram</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Hours</h3>
+            <table class="hours">
+              <tr><td>Mon</td><td>—</td></tr>
+              <tr><td>Tue</td><td>—</td></tr>
+              <tr><td>Wed</td><td>—</td></tr>
+              <tr><td>Thu</td><td>—</td></tr>
+              <tr><td>Fri</td><td>—</td></tr>
+              <tr><td>Sat</td><td>—</td></tr>
+              <tr><td>Sun</td><td>—</td></tr>
+            </table>
+            <p class="muted small">Hours may shift on holidays. Call if you’re making a special trip.</p>
+          </div>
+
+          <div class="card map-card">
+            <h3>Map</h3>
+            <div class="map-wrap">
+              <iframe
+                title="Lone Star Hempworks map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Lone%20Star%20Hempworks%20Seguin%20TX&output=embed"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section narrow" aria-labelledby="specials-banner">
         <h2 id="specials-banner" class="sr-only">In-store specials banner</h2>
-        <div class="banner-slot">
-          <div class="banner-slot__frame">
-            <img
-              src="assets/img/hempy-99.png"
-              alt="In-store specials banner featuring Hempy and value pricing"
-              width="2400"
-              height="900"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <p class="banner-caption">Specials rotate in-store. Ask what’s fresh today.</p>
+        <div class="special-banner">
+          <img
+            src="assets/img/special_99_2400x900.png"
+            alt="In-store special: $99 ounces"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
+        <p class="banner-caption">Specials rotate in-store. Ask what’s fresh today.</p>
       </section>
 
       <section class="section narrow" id="specials" aria-labelledby="instore-specials">
@@ -169,8 +227,8 @@
         <p class="footnote">No rushed choices.</p>
         <div class="card-grid">
           <div class="card-tile">
-            <h3>Batch cards on hand</h3>
-            <p>Potency, sourcing, and ingredient clarity ready for an easy review.</p>
+            <h3>Proof you can scan</h3>
+            <p>Ask for the QR-linked batch card in-store. We’ll walk you through it, no pressure.</p>
           </div>
           <div class="card-tile">
             <h3>Guided walkthroughs</h3>
@@ -211,66 +269,6 @@
         </div>
       </section>
 
-      <section class="section narrow visit" aria-labelledby="location" id="visit">
-        <p class="inline-pill">Plan your visit</p>
-        <h2 id="location">Visit Lone Star Hempworks</h2>
-        <div class="info-grid">
-          <div class="info-card">
-            <h3>Address</h3>
-            <p>
-              <a
-                href="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                633 E Court St, Seguin, TX 78155
-              </a>
-            </p>
-          </div>
-          <div class="info-card">
-            <h3>Phone</h3>
-            <p><a href="tel:+18308003213">(830) 800-3213</a></p>
-          </div>
-          <div class="info-card">
-            <h3>Email</h3>
-            <p><a href="mailto:lonestarhempworks@gmail.com">lonestarhempworks@gmail.com</a></p>
-          </div>
-          <div class="hours-card">
-            <div class="hours-card__header">
-              <span class="hours-card__icon" aria-hidden="true">⏰</span>
-              <h3>Hours &amp; Visit</h3>
-            </div>
-            <div class="hours-card__divider" aria-hidden="true"></div>
-            <div class="hours-card__rows">
-              <div class="hours-row"><span>Mon–Sat</span><span>9:00 AM – 10:00 PM</span></div>
-              <div class="hours-row"><span>Sun</span><span>10:00 AM – 8:00 PM</span></div>
-            </div>
-            <p class="hours-card__note">Hours may extend Thu–Sat. Call to confirm.</p>
-          </div>
-        </div>
-        <div class="contact-actions button-row">
-          <a
-            class="button"
-            href="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Get Directions
-          </a>
-          <a class="button secondary" href="tel:+18308003213">Call Now</a>
-          <a class="card-button" href="mailto:lonestarhempworks@gmail.com">Email</a>
-          <a class="card-button" href="#instagram" data-instagram>Daily drops &amp; community</a>
-        </div>
-        <div class="map-card" aria-label="Map to Lone Star Hempworks">
-          <iframe
-            title="Map to Lone Star Hempworks"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=633+E+Court+St,+Seguin,+TX+78155&output=embed"
-          ></iframe>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
