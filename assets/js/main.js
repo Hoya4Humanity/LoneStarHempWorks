@@ -3,6 +3,21 @@ const PHONE_TEL = 'tel:+18308003213'; // TODO: confirm phone number.
 const DIRECTIONS_URL =
   'https://www.google.com/maps/search/?api=1&query=Lone+Star+Hempworks+Seguin+TX'; // TODO: confirm directions URL.
 
+function cleanHoursLabel(value) {
+  if (!value) return '';
+  return String(value).replace(/^TODO:\s*/i, '').trim();
+}
+
+function sanitizeHoursDisplay() {
+  const hoursTargets = document.querySelectorAll('.hours tbody td, .hours-row span:last-child');
+  hoursTargets.forEach((cell) => {
+    const cleaned = cleanHoursLabel(cell.textContent);
+    if (cleaned !== cell.textContent) {
+      cell.textContent = cleaned;
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-nav');
@@ -177,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   handleAgeGate();
   handleFormSuccess();
+  sanitizeHoursDisplay();
 });
 
 function handleAgeGate() {
