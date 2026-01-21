@@ -43,6 +43,16 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="titlebar">
+        <div class="topbar-slogan">
+          <img
+            class="top-slogan"
+            src="assets/img/titlebar-sign.PNG"
+            alt="Lone Star Hempworks"
+            loading="eager"
+            decoding="async"
+          />
+          <span class="top-slogan-fallback">Lone Star Hempworks</span>
+        </div>
         <div class="nav-group">
           <button
             class="menu-toggle"
@@ -70,12 +80,12 @@
           >
             <ul>
               <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-              <li><a href="#instagram" data-instagram>Instagram — daily drops &amp; community</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="community.html">Community</a></li>
               <li><a href="products.html">Products</a></li>
               <li><a href="legal.html">Legal</a></li>
               <li><a href="contact.html">Contact</a></li>
+              <li><a href="#instagram" data-instagram>Instagram — daily drops &amp; community</a></li>
             </ul>
           </nav>
           <div class="nav-overlay" aria-hidden="true"></div>
@@ -85,11 +95,12 @@
 
     <main id="main">
       <section class="hero" aria-label="Lone Star Hempworks hero">
-        <div class="hero-media">
+        <div class="hero-frame">
           <picture>
-            <source media="(max-width: 768px)" srcset="assets/img/hempy-hero-mobile.png" />
+            <source media="(max-width: 768px)" srcset="assets/img/Hempy%20-%20LSHW%20-%20Mobile.PNG" />
             <img
-              src="assets/img/hempy-hero-web.png"
+              class="hero-img"
+              src="assets/img/Hempy%20-%20LSHW%20-%20Web.PNG"
               alt="Lone Star Hempworks hero banner featuring Hempy"
               loading="eager"
               decoding="async"
@@ -97,14 +108,13 @@
           </picture>
         </div>
       </section>
-      <p class="slogan">YOUR GREEN IN THE HEART OF SEGUIN.</p>
       <section class="hero-content" aria-labelledby="site-intro">
         <div class="hero-inner">
           <div class="hero-copy">
             <div class="hero-signboard">
               <h1 class="title-gradient" id="site-intro">Texas-based. People-first.</h1>
               <p class="subline">
-                Education-forward hemp with QR-backed proof.
+                Education-forward hemp with clarity and care.
               </p>
               <p>
                 Lone Star Hempworks is a local, in-person shop built on calm guidance and compliant education. We’re here
@@ -147,10 +157,11 @@
             </p>
 
             <div class="button-row">
-              <a class="button" href="tel:+18308003213">Call</a>
+              <a class="button" href="tel:+18308003213" data-phone>Call</a>
               <a
                 class="button secondary"
                 href="https://www.google.com/maps/search/?api=1&query=Lone+Star+Hempworks+Seguin+TX"
+                data-directions
                 target="_blank"
                 rel="noopener"
               >
@@ -158,31 +169,38 @@
               </a>
               <a class="card-button" href="#instagram" data-instagram>Instagram</a>
             </div>
-          </div>
 
-          <div class="card">
-            <h3>Hours</h3>
-            <table class="hours">
-              <tr><td>Mon</td><td>—</td></tr>
-              <tr><td>Tue</td><td>—</td></tr>
-              <tr><td>Wed</td><td>—</td></tr>
-              <tr><td>Thu</td><td>—</td></tr>
-              <tr><td>Fri</td><td>—</td></tr>
-              <tr><td>Sat</td><td>—</td></tr>
-              <tr><td>Sun</td><td>—</td></tr>
-            </table>
-            <p class="muted small">Hours may shift on holidays. Call if you’re making a special trip.</p>
-          </div>
-
-          <div class="card map-card">
-            <h3>Map</h3>
+            <!-- TODO: Replace embed src with the real store map. -->
             <div class="map-wrap">
               <iframe
                 title="Lone Star Hempworks map"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Lone%20Star%20Hempworks%20Seguin%20TX&output=embed"
+                data-map-embed
               ></iframe>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Hours</h3>
+            <table class="hours" data-hours-table>
+              <thead>
+                <tr>
+                  <th scope="col">Day</th>
+                  <th scope="col">Hours</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="muted small">Hours may shift on holidays. Call if you’re making a special trip.</p>
+          </div>
+
+          <div class="card">
+            <h3>Contact</h3>
+            <p class="muted">Need help before you arrive? We’re happy to answer questions by phone.</p>
+            <div class="button-row">
+              <a class="button secondary" href="tel:+18308003213" data-phone>Call the shop</a>
+              <a class="card-button" href="mailto:lonestarhempworks@gmail.com">Email</a>
             </div>
           </div>
         </div>
@@ -228,7 +246,7 @@
         <div class="card-grid">
           <div class="card-tile">
             <h3>Proof you can scan</h3>
-            <p>Ask for the QR-linked batch card in-store. We’ll walk you through it, no pressure.</p>
+            <p>Ask for the batch card in-store. We’ll walk you through it, no pressure.</p>
           </div>
           <div class="card-tile">
             <h3>Guided walkthroughs</h3>
