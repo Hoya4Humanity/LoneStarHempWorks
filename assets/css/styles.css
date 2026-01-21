@@ -1833,3 +1833,37 @@ body.menu-open {
     display: inline-flex;
   }
 }
+
+/* ===== Homepage hero stabilization (taller + consistent) ===== */
+
+/* Give the hero more vertical presence (matches subpage banner feel) */
+.hero.hero--sitewide {
+  padding-top: 0.75rem; /* keeps it from feeling cramped under the titlebar */
+}
+
+/* Make the hero frame enforce height */
+.hero.hero--sitewide .hero-frame {
+  height: clamp(260px, 52vw, 520px); /* mobile-first: taller */
+  overflow: hidden;
+}
+
+/* Desktop: still tall, but not absurd */
+@media (min-width: 769px) {
+  .hero.hero--sitewide .hero-frame {
+    height: clamp(360px, 28vw, 560px);
+  }
+}
+
+/* Ensure picture/img fill the frame */
+.hero-picture,
+.hero-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Avoid distortion; crop gracefully */
+.hero-img {
+  object-fit: cover;
+  object-position: center;
+}
