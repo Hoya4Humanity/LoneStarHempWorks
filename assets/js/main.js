@@ -3,19 +3,30 @@ const PHONE_TEL = 'tel:+18308003213'; // TODO: confirm phone number.
 const DIRECTIONS_URL =
   'https://www.google.com/maps/search/?api=1&query=Lone+Star+Hempworks+Seguin+TX'; // TODO: confirm directions URL.
 
-function cleanHoursLabel(value) {
-  if (!value) return '';
-  return String(value).replace(/^TODO:\s*/i, '').trim();
-}
+const STORE_HOURS = [
+  { day: 'Mon', hours: '10:00 AM – 6:00 PM' },
+  { day: 'Tue', hours: '10:00 AM – 6:00 PM' },
+  { day: 'Wed', hours: '10:00 AM – 6:00 PM' },
+  { day: 'Thu', hours: '10:00 AM – 6:00 PM' },
+  { day: 'Fri', hours: '10:00 AM – 6:00 PM' },
+  { day: 'Sat', hours: '10:00 AM – 6:00 PM' },
+  { day: 'Sun', hours: '12:00 PM – 5:00 PM' },
+];
 
-function sanitizeHoursDisplay() {
-  const hoursTargets = document.querySelectorAll('.hours tbody td, .hours-row span:last-child');
-  hoursTargets.forEach((cell) => {
-    const cleaned = cleanHoursLabel(cell.textContent);
-    if (cleaned !== cell.textContent) {
-      cell.textContent = cleaned;
-    }
-  });
+function renderStoreHours() {
+  const hoursTableBody = document.querySelector('.hours tbody');
+  if (hoursTableBody) {
+    hoursTableBody.innerHTML = STORE_HOURS.map(
+      (entry) => `<tr><th scope="row">${entry.day}</th><td>${entry.hours}</td></tr>`
+    ).join('');
+  }
+
+  const hoursRows = document.querySelector('.hours-card__rows');
+  if (hoursRows) {
+    hoursRows.innerHTML = STORE_HOURS.map(
+      (entry) => `<div class="hours-row"><span>${entry.day}</span><span>${entry.hours}</span></div>`
+    ).join('');
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -192,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   handleAgeGate();
   handleFormSuccess();
-  sanitizeHoursDisplay();
+  renderStoreHours();
 });
 
 function handleAgeGate() {
