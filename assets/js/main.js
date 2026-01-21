@@ -2,7 +2,8 @@ const INSTAGRAM_URL = 'https://instagram.com/lonestarhempworks'; // TODO: confir
 const PHONE_TEL = 'tel:+18308003213'; // TODO: confirm phone number.
 const DIRECTIONS_URL =
   'https://www.google.com/maps/search/?api=1&query=Lone+Star+Hempworks+Seguin+TX'; // TODO: confirm directions URL.
-const MAP_EMBED_URL = 'https://www.google.com/maps?q=Seguin%20TX&output=embed'; // TODO: replace with the real embed URL.
+const MAP_EMBED_URL =
+  'https://www.google.com/maps?q=Lone+Star+Hempworks,+633+E+Court+St,+Seguin,+TX+78155&output=embed';
 const HOURS = [
   { day: 'Mon', hours: 'TODO: 10:00 AM – 6:00 PM' },
   { day: 'Tue', hours: 'TODO: 10:00 AM – 6:00 PM' },
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     instagramLinks.forEach((link) => {
       link.setAttribute('href', INSTAGRAM_URL);
       link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'noopener');
+      link.setAttribute('rel', 'noopener noreferrer');
     });
   } else {
     instagramLinks.forEach((link) => {
