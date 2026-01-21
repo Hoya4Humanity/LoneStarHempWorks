@@ -2,17 +2,6 @@ const INSTAGRAM_URL = 'https://instagram.com/lonestarhempworks'; // TODO: confir
 const PHONE_TEL = 'tel:+18308003213'; // TODO: confirm phone number.
 const DIRECTIONS_URL =
   'https://www.google.com/maps/search/?api=1&query=Lone+Star+Hempworks+Seguin+TX'; // TODO: confirm directions URL.
-const MAP_EMBED_URL =
-  'https://www.google.com/maps?q=Lone+Star+Hempworks,+633+E+Court+St,+Seguin,+TX+78155&output=embed';
-const HOURS = [
-  { day: 'Mon', hours: 'TODO: 10:00 AM – 6:00 PM' },
-  { day: 'Tue', hours: 'TODO: 10:00 AM – 6:00 PM' },
-  { day: 'Wed', hours: 'TODO: 10:00 AM – 6:00 PM' },
-  { day: 'Thu', hours: 'TODO: 10:00 AM – 6:00 PM' },
-  { day: 'Fri', hours: 'TODO: 10:00 AM – 6:00 PM' },
-  { day: 'Sat', hours: 'TODO: 10:00 AM – 6:00 PM' },
-  { day: 'Sun', hours: 'TODO: 12:00 PM – 5:00 PM' },
-];
 
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
@@ -22,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const instagramLinks = document.querySelectorAll('[data-instagram]');
   const phoneLinks = document.querySelectorAll('[data-phone]');
   const directionsLinks = document.querySelectorAll('[data-directions]');
-  const mapEmbeds = document.querySelectorAll('[data-map-embed]');
 
   if (INSTAGRAM_URL) {
     instagramLinks.forEach((link) => {
@@ -55,11 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (MAP_EMBED_URL) {
-    mapEmbeds.forEach((iframe) => {
-      iframe.setAttribute('src', MAP_EMBED_URL);
-    });
-  }
 
   if (menuToggle && nav) {
     let lastFocusedElement = null;
@@ -194,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   handleAgeGate();
   handleFormSuccess();
-  populateHoursTable();
 });
 
 function handleAgeGate() {
@@ -245,29 +227,4 @@ function handleFormSuccess() {
   if (params.get('sent') === '1') {
     successTargets.forEach((el) => el.classList.add('visible'));
   }
-}
-
-function populateHoursTable() {
-  const hoursTable = document.querySelector('[data-hours-table]');
-  if (!hoursTable) return;
-
-  const hoursBody = hoursTable.querySelector('tbody') || hoursTable;
-  hoursBody.innerHTML = '';
-
-  const hoursData = Array.isArray(HOURS) ? HOURS : [];
-  const rows = hoursData.length
-    ? hoursData
-    : [{ day: 'Hours', hours: 'TODO: Add store hours' }];
-
-  rows.forEach(({ day, hours }) => {
-    const row = document.createElement('tr');
-    const dayCell = document.createElement('td');
-    const hoursCell = document.createElement('td');
-
-    dayCell.textContent = day;
-    hoursCell.textContent = hours;
-
-    row.append(dayCell, hoursCell);
-    hoursBody.appendChild(row);
-  });
 }
