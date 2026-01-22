@@ -1898,3 +1898,35 @@ body.menu-open {
   object-fit: cover;
   object-position: 50% 18%;
 }
+
+/* ===== HERO BANNER FIX (mobile crop + presence) ===== */
+
+/* Base: keep cover but bias crop downward so character stays visible */
+.hero-img {
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+/* Mobile: make the hero taller and keep crop even lower */
+@media (max-width: 640px) {
+  .hero.hero--sitewide .hero-frame,
+  .hero-frame {
+    height: clamp(320px, 78vw, 520px);
+  }
+
+  .hero-img {
+    object-position: center 78%;
+  }
+}
+
+/* Tablet/Desktop: present but controlled */
+@media (min-width: 641px) {
+  .hero.hero--sitewide .hero-frame,
+  .hero-frame {
+    height: clamp(260px, 32vw, 460px);
+  }
+
+  .hero-img {
+    object-position: center 62%;
+  }
+}
