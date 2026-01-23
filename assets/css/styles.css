@@ -469,47 +469,11 @@ body.menu-open .nav-overlay {
   border-radius: 999px;
 }
 
-.hero.hero--sitewide {
-  padding-top: 0.75rem;
-  padding-bottom: 0.5rem;
-}
-
-.hero-frame.hero-frame--sitewide {
-  width: min(1100px, 94vw);
-  margin: 0 auto;
-  border-radius: var(--hero-radius);
-  overflow: hidden;
-  border: 1px solid var(--hero-border);
-  background: rgba(0, 0, 0, 0.06);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 2400 / 900;
-}
-
-.hero-picture,
-.hero-img {
+.hero-frame:not(.hero-frame--sitewide) .hero-picture,
+.hero-frame:not(.hero-frame--sitewide) .hero-img {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-@media (max-width: 700px) {
-  .hero-frame.hero-frame--sitewide {
-    aspect-ratio: 4 / 5;
-    background: rgba(0, 0, 0, 0.08);
-  }
-
-  .hero-frame.hero-frame--sitewide .hero-img {
-    object-fit: contain;
-    object-position: center;
-    background: rgba(0, 0, 0, 0.06);
-  }
-}
-
-@media (min-width: 701px) {
-  .hero-frame.hero-frame--sitewide .hero-img {
-    object-fit: cover;
-    object-position: 50% 40%;
-  }
 }
 
 .slogan {
@@ -1873,94 +1837,79 @@ body.menu-open {
   }
 }
 
-/* ===== FINAL: Sitewide hero banner polish (mobile-first) ===== */
+/* ===== FINAL: Homepage hero fix (mobile-first, no letterbox) ===== */
 .hero.hero--sitewide {
   padding-top: 0.6rem;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.4rem;
 }
 
 .hero-frame.hero-frame--sitewide {
   width: min(1100px, 94vw);
-  margin: 0.75rem auto 0.65rem; /* tighter gap below, still breathable */
+  margin: 0.65rem auto 1rem;      /* space below hero */
   border-radius: var(--hero-radius);
   overflow: hidden;
   border: 1px solid var(--hero-border);
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.03);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 2400 / 900;
-  padding: 0.35rem; /* tighten frame padding */
+  padding: 0.25rem;               /* tighter frame */
 }
 
-.hero-frame.hero-frame--sitewide picture,
-.hero-frame.hero-frame--sitewide img {
+/* Baseline: image controls height (prevents letterboxing) */
+.hero-frame.hero-frame--sitewide .hero-img {
   width: 100%;
-  height: 100%;
+  height: auto;                   /* KEY */
   display: block;
-  border-radius: calc(var(--hero-radius) - 8px); /* image corners align with frame */
+  border-radius: calc(var(--hero-radius) - 8px);
+  background: rgba(0, 0, 0, 0.02);
+  object-fit: initial;            /* avoid forced global fit rules */
+  object-position: center;
 }
 
-/* Mobile/tablet: never crop, reduce “dead space”, make it feel tall like subpages */
+/* MOBILE: ensure no forced height/aspect-ratio applies */
 @media (max-width: 900px) {
   .hero-frame.hero-frame--sitewide {
-    aspect-ratio: 4 / 5; /* gives Hempy boots room */
-    padding: 0.25rem; /* slightly tighter on mobile */
-    margin-top: 0.65rem;
-    margin-bottom: 0.9rem; /* more space before title block */
-    background: rgba(0, 0, 0, 0.04);
+    height: auto !important;
+    aspect-ratio: auto !important; /* KEY */
+    padding: 0.22rem;
   }
 
   .hero-frame.hero-frame--sitewide .hero-img {
-    object-fit: contain !important; /* force: no crop */
-    object-position: center !important;
-    background: rgba(0, 0, 0, 0.03);
+    height: auto !important;
+    object-fit: contain;           /* safe since container is auto-sized */
   }
 }
 
-/* Desktop: cinematic crop is OK */
+/* DESKTOP: keep banner-like presence with controlled crop */
 @media (min-width: 901px) {
   .hero-frame.hero-frame--sitewide {
-    padding: 0.4rem;
+    height: clamp(260px, 22vw, 420px);
+    padding: 0.35rem;
   }
+
   .hero-frame.hero-frame--sitewide .hero-img {
+    height: 100%;
     object-fit: cover;
     object-position: 50% 42%;
   }
 }
 
-/* ===== Homepage title block spacing + readability ===== */
+/* ===== Homepage title spacing polish ===== */
 .hero-content {
-  padding-top: 2.8rem; /* slightly more room */
+  padding-top: calc(2.6rem + 10px);
 }
 
 .hero-content h1 {
-  line-height: 1.02;
   margin-top: 0;
-  margin-bottom: 0.65rem;
-}
-
-.hero-content .tagline,
-.hero-content .subline {
-  line-height: 1.35;
+  margin-bottom: 0.7rem;
+  line-height: 1.03;
 }
 
 @media (max-width: 900px) {
   .hero-content {
-    padding-top: 3.2rem; /* more breathing room under image */
-    padding-bottom: 2.6rem;
+    padding-top: 3.1rem;
   }
 
   .hero-content h1 {
-    font-size: clamp(2.1rem, 9vw, 3rem); /* prevents cramped wrap */
-    letter-spacing: -0.02em;
-    margin-bottom: 0.75rem;
-  }
-
-  .hero-content .tagline {
-    font-size: 1.15rem;
-    margin-top: 0.15rem;
-  }
-
-  .hero-content .subline {
-    margin-top: 0.35rem;
+    font-size: clamp(2.05rem, 8.8vw, 3.05rem);
   }
 }
