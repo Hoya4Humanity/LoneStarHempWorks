@@ -1872,3 +1872,95 @@ body.menu-open {
     display: inline-flex;
   }
 }
+
+/* ===== FINAL: Sitewide hero banner polish (mobile-first) ===== */
+.hero.hero--sitewide {
+  padding-top: 0.6rem;
+  padding-bottom: 0.2rem;
+}
+
+.hero-frame.hero-frame--sitewide {
+  width: min(1100px, 94vw);
+  margin: 0.75rem auto 0.65rem; /* tighter gap below, still breathable */
+  border-radius: var(--hero-radius);
+  overflow: hidden;
+  border: 1px solid var(--hero-border);
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 2400 / 900;
+  padding: 0.35rem; /* tighten frame padding */
+}
+
+.hero-frame.hero-frame--sitewide picture,
+.hero-frame.hero-frame--sitewide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: calc(var(--hero-radius) - 8px); /* image corners align with frame */
+}
+
+/* Mobile/tablet: never crop, reduce “dead space”, make it feel tall like subpages */
+@media (max-width: 900px) {
+  .hero-frame.hero-frame--sitewide {
+    aspect-ratio: 4 / 5; /* gives Hempy boots room */
+    padding: 0.25rem; /* slightly tighter on mobile */
+    margin-top: 0.65rem;
+    margin-bottom: 0.9rem; /* more space before title block */
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .hero-frame.hero-frame--sitewide .hero-img {
+    object-fit: contain !important; /* force: no crop */
+    object-position: center !important;
+    background: rgba(0, 0, 0, 0.03);
+  }
+}
+
+/* Desktop: cinematic crop is OK */
+@media (min-width: 901px) {
+  .hero-frame.hero-frame--sitewide {
+    padding: 0.4rem;
+  }
+  .hero-frame.hero-frame--sitewide .hero-img {
+    object-fit: cover;
+    object-position: 50% 42%;
+  }
+}
+
+/* ===== Homepage title block spacing + readability ===== */
+.hero-content {
+  padding-top: 2.8rem; /* slightly more room */
+}
+
+.hero-content h1 {
+  line-height: 1.02;
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+}
+
+.hero-content .tagline,
+.hero-content .subline {
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    padding-top: 3.2rem; /* more breathing room under image */
+    padding-bottom: 2.6rem;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.1rem, 9vw, 3rem); /* prevents cramped wrap */
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-content .tagline {
+    font-size: 1.15rem;
+    margin-top: 0.15rem;
+  }
+
+  .hero-content .subline {
+    margin-top: 0.35rem;
+  }
+}
