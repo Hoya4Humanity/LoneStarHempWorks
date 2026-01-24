@@ -24,7 +24,13 @@
   --radius-lg: 18px;
   --radius-md: 12px;
   --radius-sm: 10px;
+  --radius-btn: 14px;
   --section-space: 3.4rem;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
   --safe-top: max(env(safe-area-inset-top), 0px);
   --safe-bottom: max(env(safe-area-inset-bottom), 0px);
   --font-display: "Rockwell", "Georgia", "Times New Roman", serif;
@@ -94,6 +100,11 @@ h2,
 h3 {
   font-family: var(--font-display);
   letter-spacing: -0.01em;
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
 }
 
 .title-gradient {
@@ -525,7 +536,7 @@ body.menu-open .nav-overlay {
   background: var(--surface);
   border: 2px solid rgba(84, 62, 40, 0.5);
   border-radius: 16px;
-  padding: 1.1rem 1.4rem;
+  padding: 1.45rem 1.4rem 1.25rem;
   box-shadow: var(--shadow-strong);
   position: relative;
 }
@@ -678,7 +689,7 @@ body.menu-open .nav-overlay {
   width: min(1100px, calc(100% - 24px));
   margin: 0 auto;
   display: grid;
-  gap: 14px;
+  gap: var(--space-3);
   grid-template-columns: 1fr;
 }
 
@@ -754,7 +765,11 @@ body.menu-open .nav-overlay {
   padding: 1.2rem;
   box-shadow: var(--shadow-soft);
   display: grid;
-  gap: 0.6rem;
+  gap: var(--space-2);
+}
+
+.card .button-row {
+  margin-top: var(--space-2);
 }
 
 .muted {
@@ -763,6 +778,18 @@ body.menu-open .nav-overlay {
 
 .small {
   font-size: 0.9rem;
+}
+
+.store-name {
+  font-weight: 800;
+}
+
+.address span {
+  display: block;
+}
+
+.address {
+  line-height: 1.4;
 }
 
 .hero-panel {
@@ -807,12 +834,13 @@ body.menu-open .nav-overlay {
   letter-spacing: 0.02em;
   box-shadow: inset 0 0 0 1px rgba(31, 55, 37, 0.12);
   width: fit-content;
+  margin: var(--space-3) 0 var(--space-2);
 }
 
 .button-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: var(--space-2);
   align-items: stretch;
 }
 
@@ -832,7 +860,7 @@ body.menu-open .nav-overlay {
 }
 
 .hero-actions {
-  margin-top: 0.35rem;
+  margin-top: var(--space-2);
 }
 
 .hours-block {
@@ -944,31 +972,36 @@ body.menu-open .nav-overlay {
 .button-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
 }
 
 .card-button {
   display: block;
-  padding: 1.25rem;
+  padding: 1.05rem 1.2rem;
   border: 2px solid rgba(47, 106, 68, 0.3);
   background: white;
   border-radius: var(--radius-lg);
   font-weight: 700;
   text-align: center;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .card-button:hover,
 .card-button:focus-visible {
-  transform: translateY(-2px);
-  background: rgba(90, 60, 138, 0.06);
+  background: rgba(47, 106, 68, 0.08);
+  border-color: rgba(47, 106, 68, 0.45);
   box-shadow: 0 12px 24px rgba(31, 31, 41, 0.12);
 }
 
 .section {
   padding: var(--section-space) 1rem;
+}
+
+.section + .section,
+section + section {
+  margin-top: var(--space-5);
 }
 
 .section.narrow {
@@ -980,7 +1013,7 @@ body.menu-open .nav-overlay {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  gap: 0.9rem;
+  gap: var(--space-3);
 }
 
 .feature {
@@ -1542,8 +1575,8 @@ body.menu-open .nav-overlay {
 }
 
 .action-buttons {
-  gap: 0.75rem;
-  margin-top: 0.5rem;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
 }
 
 .accent-tag {
@@ -1572,7 +1605,7 @@ body.menu-open .nav-overlay {
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.2rem;
+  gap: var(--space-4);
 }
 
 .info-card,
@@ -1614,25 +1647,24 @@ body.menu-open .nav-overlay {
 button,
 input[type="submit"] {
   display: inline-block;
-  background: linear-gradient(135deg, var(--brand-green), var(--brand-green-dark));
+  background: var(--brand-green);
   color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 0.9rem 1.15rem;
+  border: 2px solid var(--brand-green);
+  border-radius: var(--radius-btn);
+  padding: 0.85rem 1.2rem;
   font-weight: 700;
   line-height: 1.1;
   min-height: 46px;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   box-shadow: var(--shadow-soft);
 }
 
 .button.secondary {
-  background: transparent;
-  color: var(--accentPurpleDark);
-  border: 1.5px solid rgba(103, 82, 184, 0.3);
-  box-shadow: inset 0 0 0 1px rgba(103, 82, 184, 0.08);
-  background: rgba(103, 82, 184, 0.04);
+  background: var(--surface);
+  color: var(--brand-green);
+  border: 2px solid rgba(47, 106, 68, 0.35);
+  box-shadow: var(--shadow-soft);
 }
 
 .button:hover,
@@ -1641,13 +1673,23 @@ input[type="submit"]:hover,
 .button:focus-visible,
 button:focus-visible,
 input[type="submit"]:focus-visible {
-  transform: translateY(-2px);
+  background: var(--brand-green-dark);
+  border-color: var(--brand-green-dark);
   box-shadow: 0 14px 30px rgba(31, 31, 41, 0.16);
 }
 
 .button.secondary:hover,
 .button.secondary:focus-visible {
-  background: rgba(103, 82, 184, 0.12);
+  background: #fff;
+  border-color: rgba(47, 106, 68, 0.6);
+  color: var(--brand-green);
+}
+
+.button:active,
+button:active,
+input[type="submit"]:active {
+  background: var(--brand-green-dark);
+  border-color: var(--brand-green-dark);
 }
 
 .compliance-micro {
@@ -1845,13 +1887,13 @@ body.menu-open {
 
 .hero-frame.hero-frame--sitewide {
   width: min(1100px, 94vw);
-  margin: 0.65rem auto 1rem;      /* space below hero */
+  margin: 0.5rem auto 0.75rem;      /* space below hero */
   border-radius: var(--hero-radius);
   overflow: hidden;
   border: 1px solid var(--hero-border);
   background: rgba(0, 0, 0, 0.03);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-  padding: 0.25rem;               /* tighter frame */
+  padding: 0.22rem;               /* tighter frame */
 }
 
 /* Baseline: image controls height (prevents letterboxing) */
@@ -1870,7 +1912,7 @@ body.menu-open {
   .hero-frame.hero-frame--sitewide {
     height: auto !important;
     aspect-ratio: auto !important; /* KEY */
-    padding: 0.22rem;
+    padding: 0.2rem;
   }
 
   .hero-frame.hero-frame--sitewide .hero-img {
@@ -1883,7 +1925,7 @@ body.menu-open {
 @media (min-width: 901px) {
   .hero-frame.hero-frame--sitewide {
     height: clamp(260px, 22vw, 420px);
-    padding: 0.35rem;
+    padding: 0.3rem;
   }
 
   .hero-frame.hero-frame--sitewide .hero-img {
