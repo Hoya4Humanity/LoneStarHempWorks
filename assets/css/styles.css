@@ -31,6 +31,8 @@
   --space-3: 16px;
   --space-4: 24px;
   --space-5: 32px;
+  --button-secondary-bg: var(--surface);
+  --button-secondary-border: rgba(47, 106, 68, 0.4);
   --safe-top: max(env(safe-area-inset-top), 0px);
   --safe-bottom: max(env(safe-area-inset-bottom), 0px);
   --font-display: "Rockwell", "Georgia", "Times New Roman", serif;
@@ -104,7 +106,7 @@ h3 {
 
 .section h2 {
   margin-top: 0;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
 }
 
 .title-gradient {
@@ -536,9 +538,13 @@ body.menu-open .nav-overlay {
   background: var(--surface);
   border: 2px solid rgba(84, 62, 40, 0.5);
   border-radius: 16px;
-  padding: 1.45rem 1.4rem 1.25rem;
+  padding: 1.75rem 1.4rem 1.25rem;
   box-shadow: var(--shadow-strong);
   position: relative;
+}
+
+.hero-signboard h1 {
+  margin-top: 0.2rem;
 }
 
 .hero-signboard p,
@@ -749,7 +755,7 @@ body.menu-open .nav-overlay {
   border: 1px solid rgba(0, 0, 0, 0.12);
   aspect-ratio: 16 / 10;
   background: #efe6d2;
-  margin-top: 0.75rem;
+  margin-top: var(--space-3);
 }
 
 .map-wrap iframe {
@@ -769,7 +775,7 @@ body.menu-open .nav-overlay {
 }
 
 .card .button-row {
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
 }
 
 .muted {
@@ -789,6 +795,7 @@ body.menu-open .nav-overlay {
 }
 
 .address {
+  margin-top: var(--space-1);
   line-height: 1.4;
 }
 
@@ -834,7 +841,7 @@ body.menu-open .nav-overlay {
   letter-spacing: 0.02em;
   box-shadow: inset 0 0 0 1px rgba(31, 55, 37, 0.12);
   width: fit-content;
-  margin: var(--space-3) 0 var(--space-2);
+  margin: var(--space-3) 0;
 }
 
 .button-row {
@@ -860,7 +867,7 @@ body.menu-open .nav-overlay {
 }
 
 .hero-actions {
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
 }
 
 .hours-block {
@@ -979,19 +986,21 @@ body.menu-open .nav-overlay {
 .card-button {
   display: block;
   padding: 1.05rem 1.2rem;
-  border: 2px solid rgba(47, 106, 68, 0.3);
-  background: white;
+  border: 2px solid var(--button-secondary-border);
+  background: var(--button-secondary-bg);
   border-radius: var(--radius-lg);
   font-weight: 700;
   text-align: center;
+  color: var(--brand-green);
   box-shadow: var(--shadow-soft);
   transition: box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  min-height: 44px;
 }
 
 .card-button:hover,
 .card-button:focus-visible {
-  background: rgba(47, 106, 68, 0.08);
-  border-color: rgba(47, 106, 68, 0.45);
+  background: #fff;
+  border-color: rgba(47, 106, 68, 0.6);
   box-shadow: 0 12px 24px rgba(31, 31, 41, 0.12);
 }
 
@@ -1013,7 +1022,7 @@ section + section {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
 .feature {
@@ -1220,7 +1229,7 @@ section + section {
 }
 
 .cta-row {
-  gap: 0.65rem;
+  gap: var(--space-2);
 }
 
 .footnote {
@@ -1353,7 +1362,7 @@ section + section {
 }
 
 .contact-actions {
-  gap: 0.75rem;
+  gap: var(--space-2);
 }
 
 .hours-card {
@@ -1661,9 +1670,9 @@ input[type="submit"] {
 }
 
 .button.secondary {
-  background: var(--surface);
+  background: var(--button-secondary-bg);
   color: var(--brand-green);
-  border: 2px solid rgba(47, 106, 68, 0.35);
+  border: 2px solid var(--button-secondary-border);
   box-shadow: var(--shadow-soft);
 }
 
@@ -1770,6 +1779,7 @@ input[type="submit"]:active {
   background: rgba(47, 106, 68, 0.12);
   color: var(--brand-green);
   font-weight: 700;
+  margin-bottom: var(--space-2);
 }
 
 .modal {
@@ -1887,13 +1897,13 @@ body.menu-open {
 
 .hero-frame.hero-frame--sitewide {
   width: min(1100px, 94vw);
-  margin: 0.5rem auto 0.75rem;      /* space below hero */
+  margin: 0.4rem auto 0.6rem;      /* space below hero */
   border-radius: var(--hero-radius);
   overflow: hidden;
   border: 1px solid var(--hero-border);
   background: rgba(0, 0, 0, 0.03);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-  padding: 0.22rem;               /* tighter frame */
+  padding: 0.18rem;               /* tighter frame */
 }
 
 /* Baseline: image controls height (prevents letterboxing) */
