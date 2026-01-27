@@ -4,13 +4,13 @@ const DIRECTIONS_URL =
   'https://www.google.com/maps/search/?api=1&query=Lone+Star+Hempworks+Seguin+TX'; // TODO: confirm directions URL.
 
 const STORE_HOURS = [
-  { day: 'Mon', hours: '10:00 AM – 6:00 PM' },
-  { day: 'Tue', hours: '10:00 AM – 6:00 PM' },
-  { day: 'Wed', hours: '10:00 AM – 6:00 PM' },
-  { day: 'Thu', hours: '10:00 AM – 6:00 PM' },
-  { day: 'Fri', hours: '10:00 AM – 6:00 PM' },
-  { day: 'Sat', hours: '10:00 AM – 6:00 PM' },
-  { day: 'Sun', hours: '12:00 PM – 5:00 PM' },
+  { day: 'Mon', hours: '9:00 AM – 11:00 PM' },
+  { day: 'Tue', hours: '9:00 AM – 11:00 PM' },
+  { day: 'Wed', hours: '9:00 AM – 11:00 PM' },
+  { day: 'Thu', hours: '9:00 AM – 11:00 PM' },
+  { day: 'Fri', hours: '9:00 AM – 12:00 AM' },
+  { day: 'Sat', hours: '9:00 AM – 12:00 AM' },
+  { day: 'Sun', hours: '11:00 AM – 9:00 PM' },
 ];
 
 function renderStoreHours() {
