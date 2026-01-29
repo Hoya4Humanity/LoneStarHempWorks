@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menuToggle && nav) {
     let lastFocusedElement = null;
-    const desktopQuery = window.matchMedia('(min-width: 960px)');
+    const desktopQuery = window.matchMedia('(min-width: 900px)');
 
     const setHiddenState = (isHidden) => {
       nav.hidden = isHidden;
