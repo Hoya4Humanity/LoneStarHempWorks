@@ -249,10 +249,10 @@ header .titlebar {
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.18);
   color: #f3ead7;
-  letter-spacing: 0.08em;
+  letter-spacing: clamp(0.08em, 0.35vw, 0.14em);
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 1.6vw, 1.35rem);
   text-align: center;
   box-shadow: 0 6px 14px rgba(20, 14, 9, 0.25);
 }
@@ -388,7 +388,7 @@ body.menu-open .nav-overlay {
   box-shadow: inset 0 -2px 0 var(--accentGreen);
 }
 
-@media (min-width: 960px) {
+@media (min-width: 900px) {
   .menu-toggle {
     display: none;
   }
@@ -396,6 +396,7 @@ body.menu-open .nav-overlay {
   .nav-links {
     position: static;
     width: auto;
+    max-width: none;
     height: auto;
     opacity: 1;
     visibility: visible;
@@ -407,12 +408,14 @@ body.menu-open .nav-overlay {
     background: transparent;
     box-shadow: none;
     border: none;
+    overflow: visible;
   }
 
   .nav-links ul {
     flex-direction: row;
     align-items: center;
     gap: 0.85rem;
+    flex-wrap: nowrap;
   }
 
   .nav-links a {
@@ -680,15 +683,12 @@ body.menu-open .nav-overlay {
   overflow: hidden;
   border: 2px solid rgba(0, 0, 0, 0.18);
   background: #f2ead8;
-  aspect-ratio: 2400 / 900;
 }
 
+.special-banner picture,
 .special-banner img {
   width: 100%;
-  height: 100%;
   display: block;
-  object-fit: cover;
-  object-position: center;
 }
 
 .visit-grid {
