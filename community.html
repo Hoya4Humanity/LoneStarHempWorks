@@ -69,20 +69,31 @@
     </header>
 
     <main id="main">
-      <figure class="special-banner" aria-label="Community banner">
-        <picture>
-          <source media="(max-width: 700px)" srcset="assets/img/Community-banner-mobile.PNG" />
-          <img
-            src="assets/img/Community-banner-desktop.PNG"
-            alt="Community Hub banner for Lone Star Hempworks"
-            loading="eager"
-            decoding="async"
-          />
-        </picture>
-      </figure>
+      <picture class="page-banner">
+        <source media="(min-width: 769px)" srcset="assets/img/Community-banner-desktop.PNG" />
+        <img
+          src="assets/img/Community-banner-mobile.PNG"
+          alt="Lone Star Hempworks Community banner"
+          loading="eager"
+          decoding="async"
+        />
+      </picture>
       <section class="page-title" aria-labelledby="community-hero">
         <div class="page-title__inner">
           <h1 id="community-hero">Community Hub</h1>
+        </div>
+      </section>
+      <section class="section narrow" aria-label="Follow Lone Star Hempworks on social media">
+        <div class="button-row social-buttons">
+          <a class="button secondary" data-instagram>Instagram</a>
+          <a
+            class="button secondary"
+            href="https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener"
+          >
+            Facebook
+          </a>
         </div>
       </section>
 
