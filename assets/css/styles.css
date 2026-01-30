@@ -543,6 +543,60 @@ body.menu-open .nav-overlay {
   margin-top: 0.25rem;
 }
 
+.page-intro {
+  background:
+    radial-gradient(circle at 20% 18%, rgba(108, 124, 63, 0.10), transparent 35%),
+    radial-gradient(circle at 85% 12%, rgba(122, 93, 63, 0.14), transparent 32%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(120, 92, 62, 0.05),
+      rgba(120, 92, 62, 0.05) 7px,
+      rgba(255, 255, 255, 0.05) 7px,
+      rgba(255, 255, 255, 0.05) 14px
+    ),
+    linear-gradient(135deg, var(--parchment), var(--parchment-warm));
+  padding: 2.2rem 1rem 1.6rem;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.page-intro__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.page-intro__signboard {
+  background: var(--surface);
+  border: 2px solid rgba(84, 62, 40, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem 1.35rem 1.1rem;
+  box-shadow: var(--shadow-strong);
+  position: relative;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.page-intro__signboard::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(84, 62, 40, 0.35);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.page-intro__signboard h1 {
+  margin: 0.1rem 0 0.25rem;
+  font-size: clamp(2rem, 5.8vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.page-intro__signboard .subline {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
 .hero-inner {
   max-width: var(--max-width);
   margin: 0 auto;
