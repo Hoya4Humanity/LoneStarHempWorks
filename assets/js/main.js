@@ -127,7 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navOverlay.classList.add('visible');
         navOverlay.setAttribute('aria-hidden', 'false');
       }
-      nav.focus();
+      const firstLink = nav.querySelector('a');
+      if (firstLink) firstLink.focus();
     };
 
     const toggleNav = () => {
