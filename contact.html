@@ -29,6 +29,7 @@
         <div class="topbar-slogan">
           <span class="top-slogan-text">YOUR GREEN IN THE HEART OF SEGUIN.</span>
         </div>
+
         <div class="nav-group">
           <button
             class="menu-toggle"
@@ -38,44 +39,46 @@
             aria-label="Toggle navigation"
           >
             <span class="menu-icon" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span></span><span></span><span></span>
             </span>
             <span class="sr-only">Menu</span>
           </button>
-          <nav id="primary-nav" class="nav-links" aria-label="Primary" aria-hidden="true" hidden>
+
+          <nav id="primary-nav" class="nav-links" aria-label="Primary" aria-hidden="true">
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="community.html">Community</a></li>
               <li><a href="products.html">Products</a></li>
               <li><a href="legal.html">Legal</a></li>
-              <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+              <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
             </ul>
           </nav>
+
           <div class="nav-overlay" aria-hidden="true"></div>
         </div>
       </div>
     </header>
 
     <main id="main">
-      <section class="page-title" aria-labelledby="contact-hero">
-        <div class="page-title__inner">
-          <h1 id="contact-hero">Contact</h1>
+      <section class="hero hero--sitewide" aria-label="Lone Star Hempworks hero banner">
+        <div class="hero-frame hero-frame--sitewide">
+          <picture class="hero-picture">
+            <source srcset="./assets/img/hero-mobile.png" media="(max-width: 900px)" />
+            <img
+              class="hero-img"
+              src="./assets/img/hero-web.png"
+              alt="Lone Star Hempworks hero banner"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
         </div>
       </section>
-      <section class="section narrow" aria-label="Follow Lone Star Hempworks on social media">
-        <div class="button-row social-buttons">
-          <a class="button secondary" data-instagram>Instagram</a>
-          <a
-            class="button secondary"
-            href="https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener"
-          >
-            Facebook
-          </a>
+      <section class="page-title" aria-labelledby="page-hero">
+        <div class="page-title__inner">
+          <h1 id="page-hero">Contact</h1>
+          <p class="muted">Questions welcome. We’ll help you choose in person, no pressure.</p>
         </div>
       </section>
 

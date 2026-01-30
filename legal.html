@@ -29,6 +29,7 @@
         <div class="topbar-slogan">
           <span class="top-slogan-text">YOUR GREEN IN THE HEART OF SEGUIN.</span>
         </div>
+
         <div class="nav-group">
           <button
             class="menu-toggle"
@@ -38,31 +39,46 @@
             aria-label="Toggle navigation"
           >
             <span class="menu-icon" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span></span><span></span><span></span>
             </span>
             <span class="sr-only">Menu</span>
           </button>
-          <nav id="primary-nav" class="nav-links" aria-label="Primary" aria-hidden="true" hidden>
+
+          <nav id="primary-nav" class="nav-links" aria-label="Primary" aria-hidden="true">
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="community.html">Community</a></li>
               <li><a href="products.html">Products</a></li>
-              <li><a class="active" href="legal.html" aria-current="page">Legal</a></li>
+              <li><a href="legal.html" class="active" aria-current="page">Legal</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
+
           <div class="nav-overlay" aria-hidden="true"></div>
         </div>
       </div>
     </header>
 
     <main id="main">
-      <section class="page-title" aria-labelledby="legal-hero">
+      <section class="hero hero--sitewide" aria-label="Lone Star Hempworks hero banner">
+        <div class="hero-frame hero-frame--sitewide">
+          <picture class="hero-picture">
+            <source srcset="./assets/img/hero-mobile.png" media="(max-width: 900px)" />
+            <img
+              class="hero-img"
+              src="./assets/img/hero-web.png"
+              alt="Lone Star Hempworks hero banner"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="page-title" aria-labelledby="page-hero">
         <div class="page-title__inner">
-          <h1 id="legal-hero">Legal &amp; safety</h1>
+          <h1 id="page-hero">Legal &amp; safety</h1>
+          <p class="muted">Straightforward rules, 21+ only, information-first.</p>
         </div>
       </section>
 
