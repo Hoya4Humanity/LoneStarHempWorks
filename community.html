@@ -29,6 +29,7 @@
         <div class="topbar-slogan">
           <span class="top-slogan-text">YOUR GREEN IN THE HEART OF SEGUIN.</span>
         </div>
+
         <div class="nav-group">
           <button
             class="menu-toggle"
@@ -38,29 +39,49 @@
             aria-label="Toggle navigation"
           >
             <span class="menu-icon" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span></span><span></span><span></span>
             </span>
             <span class="sr-only">Menu</span>
           </button>
-          <nav id="primary-nav" class="nav-links" aria-label="Primary" aria-hidden="true" hidden>
+
+          <nav id="primary-nav" class="nav-links" aria-label="Primary" aria-hidden="true">
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a class="active" href="community.html" aria-current="page">Community</a></li>
+              <li><a href="community.html" class="active" aria-current="page">Community</a></li>
               <li><a href="products.html">Products</a></li>
               <li><a href="legal.html">Legal</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
+
           <div class="nav-overlay" aria-hidden="true"></div>
         </div>
       </div>
     </header>
 
     <main id="main">
-      <picture class="page-banner">
+      <section class="hero hero--sitewide" aria-label="Lone Star Hempworks hero banner">
+        <div class="hero-frame hero-frame--sitewide">
+          <picture class="hero-picture">
+            <source srcset="./assets/img/hero-mobile.png" media="(max-width: 900px)" />
+            <img
+              class="hero-img"
+              src="./assets/img/hero-web.png"
+              alt="Lone Star Hempworks hero banner"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="page-title" aria-labelledby="page-hero">
+        <div class="page-title__inner">
+          <h1 id="page-hero">Community Hub</h1>
+          <p class="muted">Local makers, neighbors, and shop updates.</p>
+        </div>
+      </section>
+      <picture class="page-banner" aria-label="Community banner">
         <source media="(min-width: 769px)" srcset="assets/img/Community-banner-desktop.PNG" />
         <img
           src="assets/img/Community-banner-mobile.PNG"
@@ -69,11 +90,6 @@
           decoding="async"
         />
       </picture>
-      <section class="page-title" aria-labelledby="community-hero">
-        <div class="page-title__inner">
-          <h1 id="community-hero">Community Hub</h1>
-        </div>
-      </section>
 
       <section class="section narrow" aria-labelledby="community-heading">
         <h2 id="community-heading">Local makers &amp; neighbors</h2>
