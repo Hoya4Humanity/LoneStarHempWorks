@@ -2124,3 +2124,74 @@ main section + section {
 
 /* Footer link polish */
 .footer a { font-weight: 700; }
+
+/* ================================
+   DESKTOP NAV FIX (no wrap/scrollbar)
+   ================================ */
+
+.site-header { overflow-x: clip; } /* prevents the weird horizontal bar */
+
+@media (min-width: 769px) {
+  header .titlebar {
+    /* Give the nav real room and prevent wrap-driven header “thickening” */
+    grid-template-columns: 1fr minmax(0, 640px) auto;
+    gap: 0.75rem;
+  }
+
+  .nav-links { white-space: nowrap; }
+
+  .nav-links ul {
+    flex-wrap: nowrap;              /* stop wrapping into a second line */
+    overflow: visible;
+  }
+
+  .nav-links a {
+    padding: 0.45rem 0.65rem;       /* slightly tighter so it fits clean */
+  }
+
+  .topbar-slogan {
+    width: min(640px, 64%);
+  }
+
+  .top-slogan-text {
+    font-size: clamp(1rem, 1.35vw, 1.45rem); /* reduce chance of crowding */
+  }
+}
+
+/* ================================
+   PAGE BANNER: consistent hero-like sizing
+   Desktop uses 2400x900; Mobile uses 1200x1500
+   ================================ */
+
+.page-banner {
+  width: min(1100px, calc(100% - 24px));
+  margin: 14px auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  background: #f2ead8;
+  box-shadow: var(--shadow-strong);
+
+  aspect-ratio: 2400 / 900;   /* desktop banner shape */
+  max-height: 420px;          /* prevents “massive” banner */
+}
+
+.page-banner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    aspect-ratio: 4 / 5;      /* matches 1200x1500 */
+    max-height: none;
+  }
+
+  .page-banner img {
+    object-position: 50% 35%;
+  }
+}
