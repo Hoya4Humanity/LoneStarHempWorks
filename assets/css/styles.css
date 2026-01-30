@@ -544,44 +544,21 @@ body.menu-open .nav-overlay {
 }
 
 .page-intro {
-  background:
-    radial-gradient(circle at 20% 18%, rgba(108, 124, 63, 0.10), transparent 35%),
-    radial-gradient(circle at 85% 12%, rgba(122, 93, 63, 0.14), transparent 32%),
-    repeating-linear-gradient(
-      135deg,
-      rgba(120, 92, 62, 0.05),
-      rgba(120, 92, 62, 0.05) 7px,
-      rgba(255, 255, 255, 0.05) 7px,
-      rgba(255, 255, 255, 0.05) 14px
-    ),
-    linear-gradient(135deg, var(--parchment), var(--parchment-warm));
-  padding: 2.2rem 1rem 1.6rem;
-  border-bottom: 2px solid var(--border-strong);
+  padding: clamp(16px, 3vw, 28px) 16px clamp(22px, 4vw, 40px);
 }
 
 .page-intro__inner {
-  max-width: var(--max-width);
+  max-width: var(--container, 1100px);
   margin: 0 auto;
 }
 
 .page-intro__signboard {
-  background: var(--surface);
-  border: 2px solid rgba(84, 62, 40, 0.5);
-  border-radius: 16px;
-  padding: 1.5rem 1.35rem 1.1rem;
-  box-shadow: var(--shadow-strong);
-  position: relative;
-  display: grid;
-  gap: 0.55rem;
-}
-
-.page-intro__signboard::before {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border: 1px solid rgba(84, 62, 40, 0.35);
-  border-radius: 12px;
-  pointer-events: none;
+  background: var(--paper, rgba(255, 248, 232, 0.92));
+  color: var(--ink, #1e1a14);
+  border: 1px solid var(--stroke, rgba(30, 26, 20, 0.14));
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: var(--shadow-md, 0 10px 26px rgba(0, 0, 0, 0.14));
+  padding: clamp(16px, 3vw, 26px);
 }
 
 .page-intro__signboard h1 {
@@ -591,10 +568,29 @@ body.menu-open .nav-overlay {
 }
 
 .page-intro__signboard .subline {
-  margin: 0;
-  font-size: 1.05rem;
-  color: var(--muted);
+  margin-top: 8px;
   font-weight: 700;
+  opacity: 0.92;
+}
+
+.page-intro__signboard p {
+  margin-top: 10px;
+  line-height: 1.55;
+}
+
+.text-link {
+  color: var(--link, #1f5fa8);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
+.hero + .page-intro {
+  margin-top: 0;
 }
 
 .hero-inner {

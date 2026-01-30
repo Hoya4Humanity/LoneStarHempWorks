@@ -61,24 +61,29 @@
     </header>
 
     <main id="main">
-      <picture class="page-banner" aria-label="Community banner">
-        <source media="(min-width: 769px)" srcset="assets/img/Community-banner-desktop.PNG" />
-        <img
-          src="assets/img/Community-banner-mobile.PNG"
-          alt="Lone Star Hempworks Community banner"
-          loading="eager"
-          decoding="async"
-        />
-      </picture>
+      <section class="hero hero--community" aria-label="Lone Star Hempworks Community banner">
+        <div class="hero-frame hero-frame--community">
+          <picture class="hero-picture">
+            <source srcset="./assets/img/Community-banner-mobile.PNG" media="(max-width: 900px)" />
+            <img
+              class="hero-img"
+              src="./assets/img/Community-banner-desktop.PNG"
+              alt="Lone Star Hempworks community banner"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+        </div>
+      </section>
       <section class="page-intro" aria-labelledby="page-intro-title">
         <div class="page-intro__inner">
           <div class="page-intro__signboard">
             <h1 class="title-gradient" id="page-intro-title">Community Hub</h1>
             <p class="subline">Local makers, neighbors, and in-store highlights.</p>
             <p>
-              This space highlights local vendors, in-store spotlights, and updates from around Seguin. We’re proud to
-              share what neighbors are making and keep the community connected. Check back for new maker features and
-              shop news.
+              This space spotlights local vendors, community updates, and in-store highlights from around Seguin. We
+              love sharing what neighbors are making and keeping the community connected. Want to be featured? Use the
+              vendor form below.
             </p>
           </div>
         </div>
