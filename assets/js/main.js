@@ -1,7 +1,8 @@
-const INSTAGRAM_URL = 'https://instagram.com/lonestarhempworks'; // TODO: confirm handle.
-const PHONE_TEL = 'tel:+18308003213'; // TODO: confirm phone number.
+const INSTAGRAM_URL = 'https://instagram.com/lonestarhempworks';
+const FACEBOOK_URL = 'https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr';
+const PHONE_TEL = 'tel:+18308003213';
 const DIRECTIONS_URL =
-  'https://www.google.com/maps/search/?api=1&query=Lone+Star+Hempworks+Seguin+TX'; // TODO: confirm directions URL.
+  'https://www.google.com/maps/search/?api=1&query=633+E+Court+St,+Seguin,+TX+78155';
 
 const STORE_HOURS = [
   { day: 'Mon', hours: '9:00 AM – 11:00 PM' },
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navOverlay = document.querySelector('.nav-overlay');
   const body = document.body;
   const instagramLinks = document.querySelectorAll('[data-instagram]');
+  const facebookLinks = document.querySelectorAll('[data-facebook]');
   const phoneLinks = document.querySelectorAll('[data-phone]');
   const directionsLinks = document.querySelectorAll('[data-directions]');
 
@@ -46,6 +48,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   } else {
     instagramLinks.forEach((link) => {
+      const listItem = link.closest('li');
+      if (listItem) {
+        listItem.remove();
+      } else {
+        link.remove();
+      }
+    });
+  }
+
+  if (FACEBOOK_URL) {
+    facebookLinks.forEach((link) => {
+      link.setAttribute('href', FACEBOOK_URL);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+  } else {
+    facebookLinks.forEach((link) => {
       const listItem = link.closest('li');
       if (listItem) {
         listItem.remove();

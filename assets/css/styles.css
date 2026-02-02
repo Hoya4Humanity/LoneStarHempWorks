@@ -505,6 +505,12 @@ body.menu-open .nav-overlay {
   border-radius: 999px;
 }
 
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 /* Hide hamburger/menu button on desktop (keep for mobile) */
 @media (min-width: 901px) {
   .menu-toggle,
