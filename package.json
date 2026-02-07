@@ -1,0 +1,13 @@
+{
+  "name": "lonestarhempworks",
+  "version": "1.0.0",
+  "description": "Static starter website for Lone Star Hempworks in Seguin, Texas. Built with semantic HTML, vanilla CSS, and a small JS helper for the age gate and mobile navigation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
