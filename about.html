@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://www.lonestarhempworks.com/about.html" />
     <title>About Lone Star Hempworks | Seguin, TX</title>
     <meta
       name="description"
@@ -58,12 +59,17 @@
     </header>
 
     <main id="main">
-      <section class="page-hero">
+      <section class="page-hero" aria-label="Lone Star Hempworks Banner">
         <picture>
-          <source media="(max-width: 768px)" srcset="assets/img/LSHW-WebsiteBanner-1080x540-Mobile.png" />
+          <!-- Mobile -->
+          <source
+            media="(max-width: 900px), (max-device-width: 900px)"
+            srcset="assets/img/LSHW-WebsiteBanner-1080x540-Mobile.png"
+          />
+          <!-- Desktop fallback -->
           <img
             src="assets/img/LSHW-WebsiteBanner-1440x480.png"
-            alt="Lone Star Hempworks banner"
+            alt="Lone Star Hempworks"
             loading="eager"
             decoding="async"
           />
