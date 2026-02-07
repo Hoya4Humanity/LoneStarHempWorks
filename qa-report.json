@@ -1,0 +1,1220 @@
+{
+  "generatedAt": "2026-02-07T00:22:22.707469Z",
+  "summary": {
+    "failures": [
+      "contact: missing hours mon 900 am \u2013 1100 pm, tue 900 am \u2013 1100 pm, wed 900 am \u2013 1100 pm, thu 900 am \u2013 1100 pm, fri 900 am \u2013 1200 am, sat 900 am \u2013 1200 am, sun 1100 am \u2013 900 pm",
+      "contact: missing hours mon 900 am \u2013 1100 pm, tue 900 am \u2013 1100 pm, wed 900 am \u2013 1100 pm, thu 900 am \u2013 1100 pm, fri 900 am \u2013 1200 am, sat 900 am \u2013 1200 am, sun 1100 am \u2013 900 pm"
+    ]
+  },
+  "table": [
+    {
+      "requirement": "Desktop nav: hamburger hidden, horizontal nav visible",
+      "live": "PASS",
+      "local": "PASS",
+      "evidence": "All pages OK"
+    },
+    {
+      "requirement": "Mobile nav: hamburger visible, links hidden until open",
+      "live": "PASS",
+      "local": "PASS",
+      "evidence": "All pages OK"
+    },
+    {
+      "requirement": "Hero banners use correct assets and no stacking",
+      "live": "PASS",
+      "local": "PASS",
+      "evidence": "All pages OK"
+    },
+    {
+      "requirement": "Social buttons not at top of subpages",
+      "live": "PASS",
+      "local": "PASS",
+      "evidence": "None found"
+    },
+    {
+      "requirement": "Footer socials use required Instagram/Facebook URLs",
+      "live": "PASS",
+      "local": "PASS",
+      "evidence": "All pages OK"
+    },
+    {
+      "requirement": "Home page CTA labels not duplicated within viewport",
+      "live": "PASS",
+      "local": "PASS",
+      "evidence": "No clustered duplicates detected"
+    },
+    {
+      "requirement": "Phone links use tel:+18308003213",
+      "live": "PASS",
+      "local": "PASS",
+      "evidence": "All detected tel links OK"
+    },
+    {
+      "requirement": "Hours match required schedule (home/contact)",
+      "live": "FAIL",
+      "local": "FAIL",
+      "evidence": "contact: missing hours mon 900 am \u2013 1100 pm, tue 900 am \u2013 1100 pm, wed 900 am \u2013 1100 pm, thu 900 am \u2013 1100 pm, fri 900 am \u2013 1200 am, sat 900 am \u2013 1200 am, sun 1100 am \u2013 900 pm | contact: missing hours mon 900 am \u2013 1100 pm, tue 900 am \u2013 1100 pm, wed 900 am \u2013 1100 pm, thu 900 am \u2013 1100 pm, fri 900 am \u2013 1200 am, sat 900 am \u2013 1200 am, sun 1100 am \u2013 900 pm"
+    }
+  ],
+  "runs": {
+    "live": {
+      "baseUrl": "https://hoya4humanity.github.io/LoneStarHempWorks/",
+      "pages": {
+        "home": {
+          "desktop": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/index.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 5159.765625,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 5159.765625,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213",
+              "tel:+18308003213",
+              "tel:+18308003213"
+            ],
+            "hoursText": "DAY HOURS MON 9:00 AM \u2013 11:00 PM TUE 9:00 AM \u2013 11:00 PM WED 9:00 AM \u2013 11:00 PM THU 9:00 AM \u2013 11:00 PM FRI 9:00 AM \u2013 12:00 AM SAT 9:00 AM \u2013 12:00 AM SUN 11:00 AM \u2013 9:00 PM",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/index.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 6261.203125,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 6261.203125,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213",
+              "tel:+18308003213",
+              "tel:+18308003213"
+            ],
+            "hoursText": "DAY HOURS MON 9:00 AM \u2013 11:00 PM TUE 9:00 AM \u2013 11:00 PM WED 9:00 AM \u2013 11:00 PM THU 9:00 AM \u2013 11:00 PM FRI 9:00 AM \u2013 12:00 AM SAT 9:00 AM \u2013 12:00 AM SUN 11:00 AM \u2013 9:00 PM",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "about": {
+          "desktop": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/about.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2242.625,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2242.625,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213"
+            ],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/about.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 3456.09375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 3456.09375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213"
+            ],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "products": {
+          "desktop": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/products.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 1923.9375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 1923.9375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/products.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 3455.09375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 3455.09375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "community": {
+          "desktop": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/community.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "assets/img/Community-banner-mobile.PNG"
+              ],
+              "heroSources": [
+                "assets/img/Community-banner-desktop.PNG"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2557.25,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2557.25,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/community.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "assets/img/Community-banner-mobile.PNG"
+              ],
+              "heroSources": [
+                "assets/img/Community-banner-desktop.PNG"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 3849.265625,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 3849.265625,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "contact": {
+          "desktop": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/contact.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2284.9375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2284.9375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213"
+            ],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/contact.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2993.484375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2993.484375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213"
+            ],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "legal": {
+          "desktop": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/legal.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 1571.953125,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 1571.953125,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "https://hoya4humanity.github.io/LoneStarHempWorks/legal.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2628.5625,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2628.5625,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        }
+      },
+      "consoleErrors": [],
+      "brokenLinks": [
+        {
+          "url": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+          "status": 400
+        },
+        {
+          "url": "https://instagram.com/lonestarhempworks",
+          "status": 429
+        }
+      ]
+    },
+    "local": {
+      "baseUrl": "http://127.0.0.1:4173/",
+      "pages": {
+        "home": {
+          "desktop": {
+            "url": "http://127.0.0.1:4173/index.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 5159.765625,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 5159.765625,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213",
+              "tel:+18308003213",
+              "tel:+18308003213"
+            ],
+            "hoursText": "DAY HOURS MON 9:00 AM \u2013 11:00 PM TUE 9:00 AM \u2013 11:00 PM WED 9:00 AM \u2013 11:00 PM THU 9:00 AM \u2013 11:00 PM FRI 9:00 AM \u2013 12:00 AM SAT 9:00 AM \u2013 12:00 AM SUN 11:00 AM \u2013 9:00 PM",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "http://127.0.0.1:4173/index.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 6261.203125,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 6261.203125,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213",
+              "tel:+18308003213",
+              "tel:+18308003213"
+            ],
+            "hoursText": "DAY HOURS MON 9:00 AM \u2013 11:00 PM TUE 9:00 AM \u2013 11:00 PM WED 9:00 AM \u2013 11:00 PM THU 9:00 AM \u2013 11:00 PM FRI 9:00 AM \u2013 12:00 AM SAT 9:00 AM \u2013 12:00 AM SUN 11:00 AM \u2013 9:00 PM",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "about": {
+          "desktop": {
+            "url": "http://127.0.0.1:4173/about.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2242.625,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2242.625,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213"
+            ],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "http://127.0.0.1:4173/about.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 3456.09375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 3456.09375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213"
+            ],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "products": {
+          "desktop": {
+            "url": "http://127.0.0.1:4173/products.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 1923.9375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 1923.9375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "http://127.0.0.1:4173/products.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 3455.09375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 3455.09375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "community": {
+          "desktop": {
+            "url": "http://127.0.0.1:4173/community.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "assets/img/Community-banner-mobile.PNG"
+              ],
+              "heroSources": [
+                "assets/img/Community-banner-desktop.PNG"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2557.25,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2557.25,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "http://127.0.0.1:4173/community.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "assets/img/Community-banner-mobile.PNG"
+              ],
+              "heroSources": [
+                "assets/img/Community-banner-desktop.PNG"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 3849.265625,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 3849.265625,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "contact": {
+          "desktop": {
+            "url": "http://127.0.0.1:4173/contact.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2284.9375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2284.9375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213"
+            ],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "http://127.0.0.1:4173/contact.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2993.484375,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2993.484375,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [
+              "tel:+18308003213"
+            ],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        },
+        "legal": {
+          "desktop": {
+            "url": "http://127.0.0.1:4173/legal.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 1571.953125,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 1571.953125,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": false,
+              "navVisible": true,
+              "ariaExpanded": "false",
+              "ariaHidden": "false"
+            },
+            "navInteraction": null,
+            "ctaDuplicates": []
+          },
+          "mobile": {
+            "url": "http://127.0.0.1:4173/legal.html",
+            "heroInfo": {
+              "heroCount": 1,
+              "heroImgs": [
+                "./assets/img/hero-web.png"
+              ],
+              "heroSources": [
+                "./assets/img/hero-mobile.png"
+              ]
+            },
+            "socialPositions": [
+              {
+                "href": "https://instagram.com/lonestarhempworks",
+                "top": 2628.5625,
+                "inFooter": true
+              },
+              {
+                "href": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+                "top": 2628.5625,
+                "inFooter": true
+              }
+            ],
+            "footerSocials": [
+              "https://instagram.com/lonestarhempworks",
+              "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr"
+            ],
+            "telLinks": [],
+            "hoursText": "",
+            "canonicalInfo": {
+              "canonical": null,
+              "ogUrl": null
+            },
+            "navInfo": {
+              "toggleVisible": true,
+              "navVisible": false,
+              "ariaExpanded": "false",
+              "ariaHidden": "true"
+            },
+            "navInteraction": {
+              "expandedOpen": "true",
+              "hiddenOpen": "false",
+              "expandedClosed": "false",
+              "hiddenClosed": "true"
+            },
+            "ctaDuplicates": []
+          }
+        }
+      },
+      "consoleErrors": [],
+      "brokenLinks": [
+        {
+          "url": "https://www.facebook.com/share/1FrbUnXb5b/?mibextid=wwXIfr",
+          "status": 400
+        },
+        {
+          "url": "https://instagram.com/lonestarhempworks",
+          "status": 429
+        }
+      ]
+    }
+  },
+  "canonicalFindings": [
+    "No canonical or og:url tags detected across audited pages."
+  ]
+}
