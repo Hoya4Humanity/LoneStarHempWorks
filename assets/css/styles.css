@@ -558,7 +558,7 @@ body.menu-open .nav-overlay {
   border-bottom: 2px solid var(--border-strong);
 }
 
-.hero.hero--sitewide + .hero-content {
+.page-hero + .hero-content {
   margin-top: 0.25rem;
 }
 
@@ -967,6 +967,7 @@ body.menu-open .nav-overlay {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  row-gap: var(--space-3);
   align-items: stretch;
 }
 
@@ -990,6 +991,7 @@ body.menu-open .nav-overlay {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  row-gap: var(--space-3);
   align-items: stretch;
 }
 
@@ -2204,56 +2206,58 @@ body.menu-open {
   }
 }
 
-/* ===== FINAL: Homepage hero fix (mobile-first, no letterbox) ===== */
-.hero.hero--sitewide {
+/* ===== FINAL: Sitewide hero/banner (mobile-first, no letterbox) ===== */
+.page-hero {
   padding-top: 0.6rem;
   padding-bottom: 0.4rem;
 }
 
-.hero-frame.hero-frame--sitewide {
+.page-hero picture {
   width: min(1100px, 94vw);
-  margin: 0.4rem auto 0.6rem;      /* space below hero */
+  margin: 0.4rem auto 0.6rem; /* space below hero */
   border-radius: var(--hero-radius);
   overflow: hidden;
   border: 1px solid var(--hero-border);
   background: rgba(0, 0, 0, 0.03);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-  padding: 0.18rem;               /* tighter frame */
+  padding: 0.18rem; /* tighter frame */
+  display: block;
+  box-sizing: border-box;
 }
 
 /* Baseline: image controls height (prevents letterboxing) */
-.hero-frame.hero-frame--sitewide .hero-img {
+.page-hero img {
   width: 100%;
-  height: auto;                   /* KEY */
+  height: auto; /* KEY */
   display: block;
   border-radius: calc(var(--hero-radius) - 8px);
   background: rgba(0, 0, 0, 0.02);
-  object-fit: initial;            /* avoid forced global fit rules */
+  object-fit: initial; /* avoid forced global fit rules */
   object-position: center;
 }
 
 /* MOBILE: ensure no forced height/aspect-ratio applies */
 @media (max-width: 900px) {
-  .hero-frame.hero-frame--sitewide {
+  .page-hero picture {
     height: auto !important;
     aspect-ratio: auto !important; /* KEY */
     padding: 0.2rem;
   }
 
-  .hero-frame.hero-frame--sitewide .hero-img {
+  .page-hero img {
     height: auto !important;
-    object-fit: contain;           /* safe since container is auto-sized */
+    object-fit: contain; /* safe since container is auto-sized */
   }
 }
 
 /* DESKTOP: keep banner-like presence with controlled crop */
 @media (min-width: 901px) {
-  .hero-frame.hero-frame--sitewide {
+  .page-hero picture {
     height: clamp(260px, 22vw, 420px);
     padding: 0.3rem;
   }
 
-  .hero-frame.hero-frame--sitewide .hero-img {
+  .page-hero img {
     height: 100%;
     object-fit: cover;
     object-position: 50% 42%;
