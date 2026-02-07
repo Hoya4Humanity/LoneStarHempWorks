@@ -2208,12 +2208,13 @@ body.menu-open {
 
 /* ===== FINAL: Sitewide hero/banner (mobile-first, no letterbox) ===== */
 .page-hero {
+  width: 100%;
   padding-top: 0.6rem;
   padding-bottom: 0.4rem;
 }
 
 .page-hero picture {
-  width: min(1100px, 94vw);
+  width: 100%;
   margin: 0.4rem auto 0.6rem; /* space below hero */
   border-radius: var(--hero-radius);
   overflow: hidden;
