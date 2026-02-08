@@ -2206,63 +2206,92 @@ body.menu-open {
   }
 }
 
-/* ===== FINAL: Sitewide hero/banner (mobile-first, no letterbox) ===== */
+/* ===== FINAL: Sitewide hero/banner (full banner, clean spacing) ===== */
 .page-hero {
-  width: 100%;
-  padding-top: 0.6rem;
-  padding-bottom: 0.4rem;
+  margin: 0;
 }
 
-.page-hero picture {
-  width: 100%;
-  margin: 0.4rem auto 0.6rem; /* space below hero */
-  border-radius: var(--hero-radius);
+.hero-frame {
+  display: block;
+  margin: 0 auto;
+  width: min(1100px, calc(100% - 40px));
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
   overflow: hidden;
-  border: 1px solid var(--hero-border);
-  background: rgba(0, 0, 0, 0.03);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-  padding: 0.18rem; /* tighter frame */
-  display: block;
-  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Baseline: image controls height (prevents letterboxing) */
-.page-hero img {
+.hero-img {
+  display: block;
   width: 100%;
-  height: auto; /* KEY */
-  display: block;
-  border-radius: calc(var(--hero-radius) - 8px);
-  background: rgba(0, 0, 0, 0.02);
-  object-fit: initial; /* avoid forced global fit rules */
+  height: 100%;
+}
+
+.hero-frame--sitewide {
+  aspect-ratio: 3 / 1;
+}
+
+.hero-frame--sitewide .hero-img {
+  object-fit: contain;
   object-position: center;
+  background: rgba(0, 0, 0, 0.04);
 }
 
-/* MOBILE: ensure no forced height/aspect-ratio applies */
-@media (max-width: 900px) {
-  .page-hero picture {
-    height: auto !important;
-    aspect-ratio: auto !important; /* KEY */
-    padding: 0.2rem;
+@media (max-width: 768px) {
+  .hero-frame {
+    width: calc(100% - 28px);
+    margin-top: 10px;
   }
 
-  .page-hero img {
-    height: auto !important;
-    object-fit: contain; /* safe since container is auto-sized */
-  }
-}
-
-/* DESKTOP: keep banner-like presence with controlled crop */
-@media (min-width: 901px) {
-  .page-hero picture {
-    height: clamp(260px, 22vw, 420px);
-    padding: 0.3rem;
+  .hero-frame--sitewide {
+    aspect-ratio: 2 / 1;
   }
 
-  .page-hero img {
-    height: 100%;
+  .hero-frame--sitewide .hero-img {
     object-fit: cover;
-    object-position: 50% 42%;
+    object-position: center;
+    background: none;
   }
+
+  main {
+    padding-top: 14px;
+  }
+}
+
+@media (min-width: 901px) {
+  main {
+    padding-top: 18px;
+  }
+}
+
+.section {
+  margin-top: 14px;
+}
+
+h1 {
+  color: #143a2a;
+  letter-spacing: -0.02em;
+  text-shadow: none;
+}
+
+.title-gradient {
+  color: #143a2a;
+  text-shadow: none;
+}
+
+.lede {
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.btn {
+  border-color: rgba(34, 95, 64, 0.3);
+}
+
+.btn-primary {
+  background: rgba(34, 95, 64, 0.92);
+  border-color: rgba(34, 95, 64, 1);
+  color: #fff;
 }
 
 /* ===== Homepage title spacing polish ===== */

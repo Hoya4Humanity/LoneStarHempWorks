@@ -60,16 +60,12 @@
 
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks Banner">
-        <picture>
-          <!-- Mobile -->
-          <source
-            media="(max-width: 900px), (max-device-width: 900px)"
-            srcset="assets/img/LSHW-WebsiteBanner-1080x540-Mobile.png"
-          />
-          <!-- Desktop fallback -->
+        <picture class="hero-frame hero-frame--sitewide">
+          <source media="(max-width: 768px)" srcset="assets/img/LSHW-WebsiteBanner-1080x540-Mobile.png" />
           <img
             src="assets/img/LSHW-WebsiteBanner-1440x480.png"
             alt="Lone Star Hempworks"
+            class="hero-img"
             loading="eager"
             decoding="async"
           />
