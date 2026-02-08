@@ -77,16 +77,12 @@
 
     <main id="main">
       <section class="page-hero" aria-label="Lone Star Hempworks Banner">
-        <picture>
-          <!-- Mobile -->
-          <source
-            media="(max-width: 900px), (max-device-width: 900px)"
-            srcset="assets/img/LSHW-WebsiteBanner-1080x540-Mobile.png"
-          />
-          <!-- Desktop fallback -->
+        <picture class="hero-frame hero-frame--sitewide">
+          <source media="(max-width: 768px)" srcset="assets/img/LSHW-WebsiteBanner-1080x540-Mobile.png" />
           <img
             src="assets/img/LSHW-WebsiteBanner-1440x480.png"
             alt="Lone Star Hempworks"
+            class="hero-img"
             loading="eager"
             decoding="async"
           />
@@ -201,7 +197,7 @@
             <p class="muted">Need help before you arrive? We’re happy to answer questions by phone.</p>
             <p class="muted small">
               Call:
-              <a href="tel:+18308003213" data-phone>+1 (830) 800-3213</a> ·
+              <a href="tel:+18308003213" data-phone>(830) 800-3213</a> ·
               Email: <a href="mailto:lonestarhempworks@gmail.com">lonestarhempworks@gmail.com</a>
             </p>
           </div>
@@ -269,7 +265,7 @@
             Lone Star Private Reserve labels spotlight select batches available in the shop. We walk you through what’s in
             the case and help you compare options at your own pace.
           </p>
-          <p class="muted small">Questions? Call <a href="tel:+18308003213" data-phone>+1 (830) 800-3213</a>.</p>
+          <p class="muted small">Questions? Call <a href="tel:+18308003213" data-phone>(830) 800-3213</a>.</p>
           <div class="media-card">
             <img
               src="assets/img/private-reserve-lsh.jpg"
