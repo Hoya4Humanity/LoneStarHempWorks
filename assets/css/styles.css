@@ -2606,3 +2606,115 @@ main section + section {
     transform: none !important;
   }
 }
+
+.private-reserve-callout {
+  padding: 1.25rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.private-reserve-callout__inner {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+}
+
+.private-reserve-callout__img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  justify-self: center;
+}
+
+.private-reserve-callout__copy h2 {
+  margin: 0;
+}
+
+.private-reserve-callout__copy p {
+  margin: 0;
+}
+
+.private-reserve-callout__copy > * + * {
+  margin-top: 0.55rem;
+}
+
+@media (max-width: 560px) {
+  .private-reserve-callout__inner {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .private-reserve-callout__img {
+    max-width: 140px;
+    justify-self: start;
+  }
+}
+
+@media (min-width: 900px) {
+  .visit-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================================================
+   FIX: Consistent spacing under page titles (ALL PAGES)
+   Drop at VERY BOTTOM of assets/css/styles.css
+   ========================================================= */
+
+.page-intro__signboard,
+.page-title__inner {
+  display: flow-root; /* prevent margin-collapsing */
+}
+
+/* Remove odd default margins on titles */
+.page-intro__signboard h1,
+.page-title__inner h1,
+.section h2,
+.content-section h2 {
+  margin: 0;
+}
+
+/* Consistent vertical rhythm in title blocks */
+.page-intro__signboard > * + *,
+.page-title__inner > * + * {
+  margin-top: 0.9rem;
+}
+
+/* Normalize paragraph rhythm in title blocks */
+.page-intro__signboard p,
+.page-title__inner p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Optional classes used across the site */
+.page-intro__signboard .lede,
+.page-title__inner .lede {
+  margin-top: 0.7rem !important;
+  font-weight: 700;
+  opacity: 0.92;
+}
+
+.page-intro__signboard .subline,
+.page-title__inner .subline {
+  margin-top: 0.65rem !important;
+  font-weight: 800;
+}
+
+/* Lists under titles */
+.page-intro__signboard ul,
+.page-title__inner ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.page-intro__signboard li + li,
+.page-title__inner li + li {
+  margin-top: 0.35rem;
+}
