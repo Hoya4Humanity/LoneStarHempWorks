@@ -2941,3 +2941,51 @@ li + li {
     max-width: none;
   }
 }
+
+/* =========================================================
+   FIX: Title-block copy should use full width (no skinny columns)
+   ========================================================= */
+
+.page-intro__signboard,
+.page-title__inner,
+.hero-signboard,
+.hero-content {
+  /* ensure the container itself isn’t doing column tricks */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Force all intro copy elements to occupy available width */
+.page-intro__signboard p,
+.page-intro__signboard ul,
+.page-intro__signboard ol,
+.page-title__inner p,
+.page-title__inner ul,
+.page-title__inner ol,
+.hero-signboard p,
+.hero-signboard ul,
+.hero-signboard ol,
+.hero-content p,
+.hero-content ul,
+.hero-content ol {
+  width: 100%;
+  max-width: none !important;   /* kills 70ch / 760px / etc */
+}
+
+/* If any wrapper is limiting width, neutralize it */
+.page-intro__signboard .copy,
+.page-title__inner .copy,
+.hero-signboard .copy,
+.hero-content .copy {
+  width: 100%;
+  max-width: none !important;
+}
+
+/* If “columns” were accidentally applied somewhere */
+.page-intro__signboard,
+.page-title__inner,
+.hero-signboard,
+.hero-content {
+  column-count: initial !important;
+  column-width: auto !important;
+}
