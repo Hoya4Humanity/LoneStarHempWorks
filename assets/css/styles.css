@@ -2718,3 +2718,116 @@ main section + section {
 .page-title__inner li + li {
   margin-top: 0.35rem;
 }
+
+
+/* =========================================================
+   GLOBAL COPY RHYTHM + SPACING (ALL PAGES)
+   Drop at VERY BOTTOM of assets/css/styles.css
+   ========================================================= */
+
+/* Prevent margin-collapsing inside title/copy containers */
+.page-intro__signboard,
+.page-title__inner,
+.hero-signboard,
+.hero-content,
+.section-inner,
+.content-section {
+  display: flow-root;
+}
+
+/* Headings: remove random default margins */
+.page-intro__signboard h1,
+.page-title__inner h1,
+.hero-signboard h1,
+.hero-content h1,
+.section h2,
+.content-section h2 {
+  margin: 0;
+}
+
+/* Default paragraph rhythm everywhere (keeps copy readable) */
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: 0.9rem;
+}
+
+/* Lists: consistent spacing and indentation */
+ul,
+ol {
+  margin: 0.9rem 0 0;
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 0.45rem;
+}
+
+/* Optional “lede / subline” classes used across pages */
+.lede {
+  margin-top: 0.75rem !important;
+  font-weight: 700;
+  opacity: 0.92;
+}
+
+.subline {
+  margin-top: 0.85rem !important;
+  font-weight: 800;
+  color: var(--accentGreenDark);
+}
+
+/* In title blocks, enforce consistent vertical rhythm between direct children */
+.page-intro__signboard > * + *,
+.page-title__inner > * + *,
+.hero-signboard > * + *,
+.hero-content > * + * {
+  margin-top: 0.95rem;
+}
+
+/* Bullets inside signboards: don’t crowd the next element */
+.page-intro__signboard ul,
+.page-title__inner ul,
+.hero-signboard ul,
+.hero-content ul {
+  margin-bottom: 0.95rem;
+}
+
+/* CTA rows: spacing polish */
+.button-row,
+.hero-actions {
+  margin-top: 1.1rem;
+}
+
+/* Fix the “21+ pill too close to buttons” issue globally */
+.inline-pill,
+.badge-line,
+.compliance-micro,
+.compliance-line {
+  margin-top: 1rem;
+}
+
+/* If pill immediately follows a button row, give extra breathing room */
+.button-row + .inline-pill,
+.hero-actions + .inline-pill,
+.button-row + .badge-line,
+.hero-actions + .badge-line {
+  margin-top: 1.15rem !important;
+}
+
+/* Make bullets look clean in big hero areas */
+.hero-content li {
+  line-height: 1.55;
+}
+
+/* Small screens: keep rhythm but slightly tighter */
+@media (max-width: 560px) {
+  p + p { margin-top: 0.8rem; }
+  .page-intro__signboard > * + *,
+  .page-title__inner > * + *,
+  .hero-signboard > * + *,
+  .hero-content > * + * {
+    margin-top: 0.85rem;
+  }
+}
