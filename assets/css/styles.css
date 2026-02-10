@@ -2831,3 +2831,113 @@ li + li {
     margin-top: 0.85rem;
   }
 }
+
+
+/* ================================
+   TYPE + SPACING POLISH (SITEWIDE)
+   ================================ */
+
+/* Consistent spacing inside the big title signboard blocks */
+.page-intro__signboard,
+.hero-signboard {
+  --title-gap: 0.85rem;
+  --lede-gap: 0.95rem;
+  --kicker-gap: 0.95rem;
+  --para-gap: 0.95rem;
+}
+
+.page-intro__signboard h1,
+.hero-signboard h1,
+.page-intro__signboard h2,
+.hero-signboard h2 {
+  margin: 0.1rem 0 var(--title-gap);
+}
+
+/* Normalize paragraphs under titles (prevents “weird” looking blocks) */
+.page-intro__signboard p,
+.hero-signboard p {
+  margin: 0 0 var(--para-gap);
+  line-height: 1.65;
+  max-width: 72ch;
+}
+
+.page-intro__signboard p:last-child,
+.hero-signboard p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lede: first paragraph under title */
+.page-lede {
+  font-weight: 800;
+  font-size: clamp(1.02rem, 0.45vw + 0.95rem, 1.18rem);
+  letter-spacing: 0.01em;
+  color: rgba(30, 26, 20, 0.88);
+  margin-top: 0.1rem;
+  margin-bottom: var(--lede-gap);
+}
+
+/* Kicker: short bold green line under the lede */
+.page-kicker {
+  font-weight: 900;
+  color: var(--accentGreenDark);
+  letter-spacing: 0.01em;
+  margin-top: 0;
+  margin-bottom: var(--kicker-gap);
+}
+
+/* Body copy under the kicker */
+.page-body {
+  font-weight: 650;
+  color: rgba(30, 26, 20, 0.86);
+}
+
+/* Lists under the intro should have consistent rhythm */
+.page-intro__signboard ul,
+.hero-signboard ul {
+  margin: 0.35rem 0 0.95rem;
+  padding-left: 1.15rem;
+}
+
+.page-intro__signboard li,
+.hero-signboard li {
+  margin: 0.4rem 0;
+}
+
+/* Fix “too close” badge/pill spacing (homepage 21+ bar) */
+.badge-line,
+.compliance-micro,
+.compliance-line {
+  margin-top: 0.95rem;
+}
+
+/* Ensure CTA rows don’t crash into badges/pills */
+.button-row,
+.hero-actions {
+  margin-bottom: 0.35rem;
+}
+
+/* CONTACT PAGE: tighten + align the Hours heading after buttons */
+.contact-actions,
+.visit-card .button-row,
+.visit-card .cta-row {
+  margin-bottom: 0.95rem;
+}
+
+/* Add a small left nudge + top spacing for Hours label specifically */
+.hours-title {
+  margin-top: 1.05rem !important;
+  padding-left: 0.15rem;
+}
+
+/* Mobile: keep intro text readable */
+@media (max-width: 520px) {
+  .page-intro__signboard,
+  .hero-signboard {
+    padding: 18px 16px;
+  }
+
+  .page-intro__signboard p,
+  .hero-signboard p {
+    max-width: none;
+  }
+}
