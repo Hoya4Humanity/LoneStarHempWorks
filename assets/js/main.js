@@ -4,15 +4,27 @@ const PHONE_TEL = 'tel:+18308003213';
 const DIRECTIONS_URL =
   'https://www.google.com/maps/search/?api=1&query=633+E+Court+St,+Seguin,+TX+78155';
 
-const STORE_HOURS = [
-  { day: 'Mon', hours: '9:00 AM – 11:00 PM' },
-  { day: 'Tue', hours: '9:00 AM – 11:00 PM' },
-  { day: 'Wed', hours: '9:00 AM – 11:00 PM' },
-  { day: 'Thu', hours: '9:00 AM – 11:00 PM' },
-  { day: 'Fri', hours: '9:00 AM – 12:00 AM' },
-  { day: 'Sat', hours: '9:00 AM – 12:00 AM' },
+const SEGUIN_STORE_HOURS = [
+  { day: 'Mon', hours: '9:00 AM – 10:00 PM' },
+  { day: 'Tue', hours: '9:00 AM – 10:00 PM' },
+  { day: 'Wed', hours: '9:00 AM – 10:00 PM' },
+  { day: 'Thu', hours: '9:00 AM – 10:00 PM' },
+  { day: 'Fri', hours: '9:00 AM – 10:00 PM' },
+  { day: 'Sat', hours: '9:00 AM – 10:00 PM' },
+  { day: 'Sun', hours: '10:00 AM – 9:00 PM' },
+];
+
+const NEW_BRAUNFELS_STORE_HOURS = [
+  { day: 'Mon', hours: '10:00 AM – 10:00 PM' },
+  { day: 'Tue', hours: '10:00 AM – 10:00 PM' },
+  { day: 'Wed', hours: '10:00 AM – 10:00 PM' },
+  { day: 'Thu', hours: '10:00 AM – 10:00 PM' },
+  { day: 'Fri', hours: '10:00 AM – 10:00 PM' },
+  { day: 'Sat', hours: '10:00 AM – 10:00 PM' },
   { day: 'Sun', hours: '11:00 AM – 9:00 PM' },
 ];
+
+const STORE_HOURS = SEGUIN_STORE_HOURS;
 
 function renderStoreHours() {
   const hoursTableBody = document.querySelector('.hours tbody');
